@@ -1,0 +1,40 @@
+.dropList {
+    @apply w-full absolute -translate-y-60;
+    z-index: 2;
+    transition: 0.5s transform;
+}
+
+.active {
+    @apply translate-y-0 min-h-screen;
+}
+.activeBlur {
+    @apply h-screen;
+}
+.content {
+    @apply w-full h-fit bg-lightGreen;
+}
+.bgBlur {
+    @apply backdrop-blur-sm;
+    z-index: 2;
+}
+.item {
+    width: 240px;
+}
+
+.item ul {
+    @apply flex flex-col items-start gap-6;
+}
+
+.item ul li:not(:first-child) {
+    font-weight: 600;
+    opacity: 0.6;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.item ul li:not(:first-child):hover {
+    opacity: 1;
+}
+.item ul li:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}

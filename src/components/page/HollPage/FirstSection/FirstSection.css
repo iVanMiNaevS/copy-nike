@@ -1,0 +1,200 @@
+.firstSect__info {
+    width: 570px;
+    font-size: 20px;
+    color: white;
+}
+.firstSect {
+    @apply bg-darkColor pb-64;
+}
+
+.firstSect a {
+    transition: 0.3s;
+}
+.firstSect__wrapper {
+    display: flex;
+    padding-top: 128px;
+    padding-left: 64px;
+    gap: 128px;
+}
+.firstSect__nikeLogo {
+    position: absolute;
+    right: -200px;
+    transform: translate(-200px, -130px);
+    z-index: 0;
+    max-width: 1200px;
+    opacity: 0.4;
+}
+
+.firstSect__shoes {
+    position: absolute;
+    right: 100px;
+    z-index: 1;
+}
+.shoesAnim-enter {
+    position: absolute;
+    transform: translateX(1000px);
+}
+.shoesAnim-enter-active {
+    transform: translateX(0px);
+    transition: transform 1500ms;
+}
+.shoesAnim-exit {
+    transform: translateX(0px);
+}
+.shoesAnim-exit-active {
+    position: absolute;
+    transform: translateX(1000px);
+    transition: transform 1500ms;
+}
+@media (min-width: 576px) {
+    .firstSect {
+        padding-bottom: 150px;
+    }
+    .firstSect__content {
+        padding-top: 50px;
+    }
+    .firstSect__info {
+        width: 100%;
+    }
+    .firstSect__wrapper {
+        display: block;
+        padding-top: 128px;
+        padding-left: 64px;
+        gap: 0;
+    }
+    .firstSect__imgPart {
+        position: relative;
+        height: 400px;
+    }
+    .firstSect__nikeLogo {
+        right: -150px;
+        transform: translate(-200px, -30px);
+        max-width: 700px;
+    }
+
+    .firstSect__shoes {
+        right: 0px;
+        max-width: 600px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .firstSect {
+        padding-bottom: 150px;
+    }
+    .firstSect__content {
+        padding-top: 50px;
+    }
+    .firstSect__info {
+        width: 100%;
+    }
+    .firstSect__wrapper {
+        display: block;
+        padding-top: 128px;
+        padding-left: 64px;
+        gap: 0;
+    }
+    .firstSect__imgPart {
+        position: relative;
+        height: 400px;
+    }
+    .firstSect__nikeLogo {
+        right: -150px;
+        transform: translate(-200px, -30px);
+        max-width: 700px;
+    }
+
+    .firstSect__shoes {
+        right: 0px;
+        max-width: 600px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .firstSect {
+        padding-bottom: 150px;
+    }
+    .firstSect__wrapper {
+        @apply flex pt-32 pl-16 gap-32;
+    }
+    .firstSect__content {
+        padding-top: 50px;
+    }
+    .firstSect__info {
+        width: 30%;
+    }
+    .firstSect__imgPart {
+        position: static;
+        height: 400px;
+    }
+    .firstSect__nikeLogo {
+        right: -150px;
+        transform: translate(-200px, -30px);
+        max-width: 700px;
+    }
+
+    .firstSect__shoes {
+        right: 0px;
+        max-width: 600px;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .firstSect {
+        padding-bottom: 170px;
+    }
+    .firstSect__wrapper {
+        @apply flex pt-32 pl-16 gap-32;
+    }
+    .firstSect__content {
+        padding-top: 160px;
+    }
+    .firstSect__info {
+        width: 570px;
+    }
+    .firstSect__nikeLogo {
+        right: -150px;
+        transform: translate(-200px, -30px);
+        max-width: 700px;
+    }
+
+    .firstSect__shoes {
+        right: 0px;
+        max-width: 600px;
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1440px) {
+    .firstSect__wrapper {
+        @apply flex pt-32 pl-16 gap-32;
+    }
+    .firstSect__nikeLogo {
+        right: -150px;
+        transform: translate(-200px, -50px);
+        max-width: 800px;
+    }
+
+    .firstSect__shoes {
+        right: 50px;
+        max-width: 700px;
+    }
+}
+@media (min-width: 1700px) {
+    .firstSect__wrapper {
+        @apply flex pt-32 pl-16 gap-32;
+    }
+    .firstSect__nikeLogo {
+        right: -200px;
+        transform: translate(-200px, -130px);
+        max-width: 1200px;
+    }
+
+    .firstSect__shoes {
+        right: 100px;
+        max-width: 839px;
+    }
+}

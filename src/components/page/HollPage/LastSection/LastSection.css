@@ -1,0 +1,69 @@
+.LastSection {
+    @apply bg-darkColor pb-20;
+}
+.last-section__title {
+}
+.last-section__nike-app {
+    @apply pt-36 pb-8 px-12;
+    flex: 0 1 100%;
+    background-image: url("../../../../img/holl-page/green5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.last-section__NRC {
+    @apply pt-36 pb-8 px-12;
+    flex: 0 1 100%;
+    background-image: url("../../../../img/holl-page/green3.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.last-section__logo {
+    margin: 0 auto;
+    width: 170px;
+    border-radius: 50px;
+}
+.last-section__text {
+    @apply text-white text-3xl h-16;
+}
+
+.LastSection a {
+    transition: 0.3s;
+}
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1440px) {
+    .last-section__text {
+        @apply text-white text-3xl h-10;
+    }
+    .last-section__nike-app {
+        @apply pt-24 pb-8 px-12;
+    }
+    .last-section__NRC {
+        @apply pt-24 pb-8 px-12;
+    }
+}
+@media (min-width: 1700px) {
+    .last-section__text {
+        @apply text-white text-3xl h-16;
+    }
+    .last-section__nike-app {
+        @apply pt-36 pb-8 px-12;
+    }
+    .last-section__NRC {
+        @apply pt-36 pb-8 px-12;
+    }
+}

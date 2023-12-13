@@ -1,0 +1,64 @@
+footer {
+    @apply bottom-0 text-darkColor bg-lightGreen w-full  py-10 px-48;
+}
+footer .links {
+    @apply flex justify-between mb-12;
+}
+footer .columns {
+    @apply flex justify-between flex-wrap;
+    width: 80%;
+}
+
+footer .title {
+    @apply text-xl font-semibold cursor-pointer pb-4;
+}
+footer .col1 .title:not(:first-child) {
+    @apply pb-4;
+}
+footer .col__link {
+    @apply opacity-70 cursor-pointer font-semibold hover:opacity-100 hover:font-bold h-10;
+    width: fit-content;
+}
+
+footer .socialNetwork {
+    @apply flex w-1/2 justify-end gap-x-6;
+}
+footer .socialNetwork .sn {
+    @apply w-10 h-10 rounded-full flex items-center cursor-pointer justify-center hover:bg-slate-200;
+    background-color: #393e4636;
+}
+footer .col1 {
+    @apply text-2xl font-semibold;
+    width: 110px;
+}
+
+footer .col2 {
+    width: 110px;
+}
+footer .col3 {
+    width: 110px;
+}
+footer .col4 {
+    width: 110px;
+}
+
+footer .cookie-and-terms {
+    @apply flex;
+}
+.footer__left-part {
+    @apply flex w-1/2;
+}
+footer .location {
+    @apply flex items-center mr-8 text-sm font-semibold cursor-pointer;
+    max-height: 24px;
+}
+footer .anything {
+    @apply flex items-center text-sm opacity-70 font-semibold;
+    max-height: 24px;
+}
+footer .cookie-and-terms-links {
+    @apply flex gap-4 flex-wrap w-1/2 justify-end;
+}
+footer .cookie-and-terms-links__item {
+    @apply opacity-70 cursor-pointer font-semibold hover:opacity-100 hover:font-bold;
+}

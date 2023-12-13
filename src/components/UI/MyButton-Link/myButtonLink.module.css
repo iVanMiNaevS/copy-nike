@@ -1,0 +1,4 @@
+.btLink {
+    @apply inline-block bg-ctGreen text-white rounded-lg py-2.5;
+    padding: 10px 20px 10px 20px;
+}

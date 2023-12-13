@@ -1,0 +1,4 @@
+button {
+    @apply px-5 bg-ctGreen text-white rounded-lg py-2.5;
+    cursor: pointer;
+}

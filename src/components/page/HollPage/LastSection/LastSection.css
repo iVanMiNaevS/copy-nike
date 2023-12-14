@@ -3,6 +3,9 @@
 }
 .last-section__title {
 }
+.last-section__block {
+    @apply flex justify-between gap-6;
+}
 .last-section__nike-app {
     @apply pt-36 pb-8 px-12;
     flex: 0 1 100%;
@@ -29,19 +32,102 @@
 .LastSection a {
     transition: 0.3s;
 }
+@media (min-width: 320px) {
+    .LastSection {
+        padding-top: 150px;
+    }
+    .last-section__block {
+        @apply flex justify-between flex-col gap-6;
+    }
+    .last-section__text {
+        @apply text-white text-3xl h-20 pt-4 mb-2;
+    }
+    .last-section__nike-app {
+        @apply pt-16 pb-8 px-12;
+    }
+    .last-section__NRC {
+        @apply pt-16 pb-8 px-12;
+    }
+}
 @media (min-width: 576px) {
+    .LastSection {
+        padding-top: 150px;
+    }
+    .last-section__block {
+        @apply flex justify-between gap-6;
+    }
+    .last-section__text {
+        @apply text-white text-3xl h-14 pt-4;
+    }
+    .last-section__nike-app {
+        @apply pt-16 pb-8 px-12;
+    }
+    .last-section__NRC {
+        @apply pt-16 pb-8 px-12;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    .last-section__text {
+        @apply text-white text-3xl h-12 pt-2;
+    }
+    .last-section__nike-app {
+        @apply pt-20 pb-8 px-12;
+    }
+    .last-section__NRC {
+        @apply pt-20 pb-8 px-12;
+    }
+    .last-section__logo {
+        margin: 0 auto;
+        width: 140px;
+        border-radius: 50px;
+    }
+    .last-section__block {
+        @apply flex flex-row justify-between gap-6;
+    }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .last-section__text {
+        @apply text-white text-3xl h-14 pt-2 pb-5;
+    }
+    .last-section__nike-app {
+        @apply pt-20 pb-8 px-12;
+    }
+    .last-section__NRC {
+        @apply pt-20 pb-8 px-12;
+    }
+    .last-section__logo {
+        margin: 0 auto;
+        width: 170px;
+        border-radius: 50px;
+    }
+    .last-section__block {
+        @apply flex justify-between gap-6;
+    }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+    .last-section__text {
+        @apply text-white text-3xl h-14 pt-2 pb-5;
+    }
+    .last-section__nike-app {
+        @apply pt-24 pb-8 px-12;
+    }
+    .last-section__NRC {
+        @apply pt-24 pb-8 px-12;
+    }
+    .last-section__logo {
+        margin: 0 auto;
+        width: 170px;
+        border-radius: 50px;
+    }
+    .last-section__block {
+        @apply flex justify-between gap-6;
+    }
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
@@ -55,6 +141,14 @@
     .last-section__NRC {
         @apply pt-24 pb-8 px-12;
     }
+    .last-section__logo {
+        margin: 0 auto;
+        width: 170px;
+        border-radius: 50px;
+    }
+    .last-section__block {
+        @apply flex justify-between gap-6;
+    }
 }
 @media (min-width: 1700px) {
     .last-section__text {
@@ -65,5 +159,13 @@
     }
     .last-section__NRC {
         @apply pt-36 pb-8 px-12;
+    }
+    .last-section__logo {
+        margin: 0 auto;
+        width: 170px;
+        border-radius: 50px;
+    }
+    .last-section__block {
+        @apply flex justify-between gap-6;
     }
 }

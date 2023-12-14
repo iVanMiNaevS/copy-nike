@@ -13,7 +13,7 @@ function DropList({ dropListIsOpen, setDropListIsOpen, content }) {
                 className={styles.content}
                 onMouseLeave={() => setDropListIsOpen(false)}
             >
-                <div className="wrapper flex gap-20 justify-center py-8">
+                <div className="wrapper flex gap-20 justify-center">
                     {content &&
                         content.map((dropListFromLink, index) => {
                             const col = dropListFromLink["col" + (index + 1)];

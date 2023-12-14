@@ -39,13 +39,7 @@ function NWCSliderLife() {
                         phone and I could not have asked for a better gift.
                         There is something so beautiful when there is knowledge
                         and help that is FREE to use. The start-up plan,
-                        bodyweight plan and keeping in shape plan ARE THE BEST.
-                        Theres a mixture of cardio and muscle building, and it
-                        truly cares about how and how well you can get your body
-                        in shape, working on the whole package as you progress
-                        through your plan. I recommend this app to anyone that
-                        needs help starting and staying motivated. It seriously
-                        helps you out. At least it did for me!
+                        bodyweight plan and keeping in shape plan.
                     </p>
                     <MyButtontLink
                         to="#"

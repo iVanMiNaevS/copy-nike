@@ -4,7 +4,9 @@ header {
 .headerPart {
     @apply flex justify-between;
 }
-
+.icon {
+    @apply w-80 h-16;
+}
 .headerPart li {
     border-bottom-width: 4px;
     border-color: transparent;
@@ -26,24 +28,79 @@ header ul {
     @apply flex items-center gap-6 h-full;
     padding-top: 4px;
 }
+.link0 {
+}
+.link1 {
+}
+.link2 {
+}
+.link3 {
+}
 
 .rightPart {
-    @apply h-16 flex gap-2 justify-center items-center;
+    @apply w-80 h-16 flex gap-3 justify-end items-center;
 }
 
 .search1 {
-    @apply rounded-2xl pl-2 border-none h-7;
+    @apply rounded-2xl pl-10 border-none h-7;
     outline: none;
+    background-image: url("../../../img/search-regular-24.png");
+    background-size: 24px;
+    background-position: 10px 50%;
+    background-repeat: no-repeat;
+}
+.mobRightPart {
+    @apply flex w-56 justify-between items-center;
+    display: none;
+    cursor: pointer;
+}
+.burger {
+    @apply w-8 h-6 flex flex-col justify-between;
+}
+.row {
+    @apply w-full bg-darkColor;
+    height: 15%;
 }
 @media (max-width: 1700px) {
 }
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
+    .search1 {
+        width: 170px;
+    }
+    header ul {
+        @apply flex items-center gap-5 h-full;
+        padding-top: 4px;
+    }
 }
 @media (max-width: 1200px) {
+    .link1 {
+        display: none !important;
+    }
+    .search1 {
+        width: 170px;
+    }
+    .rightPart {
+        @apply w-80 h-16 flex gap-3 justify-end items-center;
+    }
 }
 @media (max-width: 992px) {
+    .headerPart {
+        align-items: center;
+    }
+    header ul {
+        display: none;
+    }
+    .rightPart {
+        display: none;
+    }
+    .mobRightPart {
+        display: flex;
+    }
 }
 @media (max-width: 768px) {
+    .icon {
+        @apply w-32 h-16;
+    }
 }
 @media (max-width: 576px) {
 }

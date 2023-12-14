@@ -25,10 +25,7 @@ function FirstSection() {
                         quaerat corrupti?
                     </div>
 
-                    <MyButtontLink
-                        to="/shoes"
-                        stylesOut="px-5 mt-10 hover:bg-slate-500"
-                    >
+                    <MyButtontLink to="/shoes" stylesOut="firstSect__button">
                         WATCH SHOES
                     </MyButtontLink>
                 </div>

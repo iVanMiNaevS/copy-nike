@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import DropList from "../dropList/DropList";
 import styles from "./Header.module.css";
 import { contentDropListObj } from "../../../contentArrs/contentDropListObj";
+import { joinClasses } from "../../../utils/joinClasses";
 
 function Header({ links }) {
     const [dropListIsOpen, setDropListIsOpen] = useState(false);
@@ -21,6 +22,7 @@ function Header({ links }) {
                                 contentDropListObj[`${link.id}`]
                             );
                         }}
+                        className={styles[`link${index}`]}
                     >
                         <Link to={link.link}>{link.text}</Link>
                     </li>
@@ -28,7 +30,9 @@ function Header({ links }) {
             }),
 
             <li key={1} onMouseEnter={() => setDropListIsOpen(false)}>
-                <Link to={linkUsualy.link}>{linkUsualy.text}</Link>
+                <Link to={linkUsualy.link} className="whitespace-nowrap">
+                    {linkUsualy.text}
+                </Link>
             </li>,
         ];
     }
@@ -37,7 +41,7 @@ function Header({ links }) {
             <header>
                 <div className="wrapper">
                     <div className={styles.headerPart}>
-                        <div className="w-64 h-16">
+                        <div className={styles.icon}>
                             <img
                                 src={require("../../../img/holl-page/jordan-icon.png")}
                                 alt="men"
@@ -53,12 +57,22 @@ function Header({ links }) {
                             </ul>
                         </nav>
                         <div className={styles.rightPart}>
-                            <i className="bx bx-search text-2xl"></i>
                             <input
                                 placeholder="Search"
                                 className={styles.search1}
                             />
                             <i className="bx bx-shopping-bag text-3xl"></i>
+                            <i className="bx bx-user text-3xl"></i>
+                        </div>
+                        <div className={styles.mobRightPart}>
+                            <i className="bx bx-search text-3xl"></i>
+                            <i className="bx bx-shopping-bag text-3xl"></i>
+                            <i className="bx bx-user text-3xl"></i>
+                            <div className={styles.burger}>
+                                <div className={styles.row}></div>
+                                <div className={styles.row}></div>
+                                <div className={styles.row}></div>
+                            </div>
                         </div>
                     </div>
                 </div>

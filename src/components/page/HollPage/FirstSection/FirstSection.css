@@ -10,6 +10,9 @@
 .firstSect a {
     transition: 0.3s;
 }
+.firstSect__button {
+    @apply px-5 mt-10 hover:bg-slate-500;
+}
 .firstSect__wrapper {
     display: flex;
     padding-top: 128px;
@@ -46,19 +49,55 @@
     transform: translateX(1000px);
     transition: transform 1500ms;
 }
-@media (min-width: 576px) {
+@media (min-width: 320px) {
     .firstSect {
-        padding-bottom: 150px;
+        padding-bottom: 100px;
     }
     .firstSect__content {
         padding-top: 50px;
     }
     .firstSect__info {
         width: 100%;
+        text-align: center;
+    }
+    .firstSect__button {
+        @apply px-5 mt-10 mx-auto hover:bg-slate-500 block text-center w-fit;
     }
     .firstSect__wrapper {
         display: block;
-        padding-top: 128px;
+        padding-top: 70px;
+        padding-left: 20px;
+        gap: 0;
+    }
+    .firstSect__imgPart {
+        position: relative;
+        height: 400px;
+    }
+    .firstSect__nikeLogo {
+        right: -150px;
+        transform: translate(-200px, 0px);
+        max-width: 500px;
+    }
+
+    .firstSect__shoes {
+        right: 0px;
+        max-width: 500px;
+    }
+}
+@media (min-width: 576px) {
+    .firstSect {
+        padding-bottom: 100px;
+    }
+    .firstSect__content {
+        padding-top: 50px;
+    }
+    .firstSect__info {
+        width: 100%;
+        text-align: left;
+    }
+    .firstSect__wrapper {
+        display: block;
+        padding-top: 70px;
         padding-left: 64px;
         gap: 0;
     }
@@ -68,13 +107,16 @@
     }
     .firstSect__nikeLogo {
         right: -150px;
-        transform: translate(-200px, -30px);
-        max-width: 700px;
+        transform: translate(-200px, 0px);
+        max-width: 500px;
     }
 
     .firstSect__shoes {
         right: 0px;
-        max-width: 600px;
+        max-width: 500px;
+    }
+    .firstSect__button {
+        @apply px-5 mt-10 mx-0 hover:bg-slate-500;
     }
 }
 
@@ -114,7 +156,7 @@
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .firstSect {
-        padding-bottom: 150px;
+        padding-bottom: 100px;
     }
     .firstSect__wrapper {
         @apply flex pt-32 pl-16 gap-32;
@@ -123,7 +165,8 @@
         padding-top: 50px;
     }
     .firstSect__info {
-        width: 30%;
+        width: 40%;
+        font-size: 18px;
     }
     .firstSect__imgPart {
         position: static;
@@ -132,12 +175,12 @@
     .firstSect__nikeLogo {
         right: -150px;
         transform: translate(-200px, -30px);
-        max-width: 700px;
+        max-width: 600px;
     }
 
     .firstSect__shoes {
         right: 0px;
-        max-width: 600px;
+        max-width: 500px;
     }
 }
 
@@ -150,10 +193,11 @@
         @apply flex pt-32 pl-16 gap-32;
     }
     .firstSect__content {
-        padding-top: 160px;
+        padding-top: 60px;
     }
     .firstSect__info {
-        width: 570px;
+        width: 400px;
+        font-size: 20px;
     }
     .firstSect__nikeLogo {
         right: -150px;
@@ -177,7 +221,13 @@
         transform: translate(-200px, -50px);
         max-width: 800px;
     }
-
+    .firstSect__content {
+        padding-top: 160px;
+    }
+    .firstSect__info {
+        width: 570px;
+        font-size: 20px;
+    }
     .firstSect__shoes {
         right: 50px;
         max-width: 700px;

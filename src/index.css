@@ -20,7 +20,20 @@ body {
     margin: 0 auto;
 }
 
+@media (min-width: 320px) {
+    footer {
+        display: none;
+    }
+    .wrapper {
+        max-width: 100%;
+        padding: 0 20px 0 20px;
+    }
+}
 @media (min-width: 576px) {
+    .wrapper {
+        max-width: 100%;
+        padding: 0 20px 0 20px;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */

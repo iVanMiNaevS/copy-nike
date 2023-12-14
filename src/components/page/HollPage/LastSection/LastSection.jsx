@@ -9,7 +9,7 @@ function LastSection() {
                 <h1 className="last-section__title text-5xl text-white mb-5">
                     Discover Our Apps
                 </h1>
-                <div className="flex justify-between gap-6">
+                <div className="last-section__block">
                     <div className="last-section__nike-app">
                         <img
                             src={require("../../../../img/holl-page/nike-logo2.jpg")}

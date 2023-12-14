@@ -19,6 +19,8 @@
 }
 .item {
     width: 240px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .item ul {

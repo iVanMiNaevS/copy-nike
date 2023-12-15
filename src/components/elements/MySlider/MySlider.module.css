@@ -43,15 +43,15 @@
 }
 @media (min-width: 320px) {
     .slider {
-        gap: 10px;
+        gap: 20px;
     }
     .item {
-        flex: 0 0 100%;
+        flex: 0 0 85%;
         padding-bottom: 10px;
     }
     .art {
         width: 100%;
-        height: 510px;
+        height: 95vw;
     }
     .buttons {
         display: none;
@@ -73,12 +73,12 @@
         gap: 10px;
     }
     .item {
-        flex: 0 0 60%;
+        flex: 0 0 40%;
         padding-bottom: 10px;
     }
     .art {
         width: 100%;
-        height: 450px;
+        height: 70vw;
     }
     .buttons {
         display: none;
@@ -107,7 +107,7 @@
     }
     .art {
         width: 100%;
-        height: 500px;
+        height: 50vw;
     }
     .art img {
         height: 100%;

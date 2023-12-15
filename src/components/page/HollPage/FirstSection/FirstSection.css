@@ -71,17 +71,18 @@
     }
     .firstSect__imgPart {
         position: relative;
-        height: 400px;
+        height: 280px;
+        margin-top: 100px;
     }
     .firstSect__nikeLogo {
-        right: -150px;
-        transform: translate(-200px, 0px);
-        max-width: 500px;
+        right: -100px;
+        transform: translate(-100px, 0px);
+        max-width: 90vw;
     }
 
     .firstSect__shoes {
         right: 0px;
-        max-width: 500px;
+        max-width: 90vw;
     }
 }
 @media (min-width: 576px) {
@@ -104,16 +105,17 @@
     .firstSect__imgPart {
         position: relative;
         height: 400px;
+        margin-top: 70px;
     }
     .firstSect__nikeLogo {
         right: -150px;
         transform: translate(-200px, 0px);
-        max-width: 500px;
+        max-width: 90vw;
     }
 
     .firstSect__shoes {
         right: 0px;
-        max-width: 500px;
+        max-width: 90vw;
     }
     .firstSect__button {
         @apply px-5 mt-10 mx-0 hover:bg-slate-500;

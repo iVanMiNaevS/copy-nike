@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/copy-nike/static/css/main.df174e85.css",
+    "main.js": "/copy-nike/static/js/main.3aa5cf88.js",
+    "static/media/green3.jpeg": "/copy-nike/static/media/green3.b60ca835e2007853e8b2.jpeg",
+    "static/media/green5.jpg": "/copy-nike/static/media/green5.d0d9d261fe69afd90ad2.jpg",
+    "static/media/winter-mount.jpg": "/copy-nike/static/media/winter-mount.6ffeab2d33d9af7f04b3.jpg",
+    "static/media/nike-shoes.png": "/copy-nike/static/media/nike-shoes.0cff98ae23033035dbac.png",
+    "static/media/mount-mans.jpg": "/copy-nike/static/media/mount-mans.94e6516c902fac2e8122.jpg",
+    "static/media/snowboardman.jpeg": "/copy-nike/static/media/snowboardman.ad383c289b0d4795d891.jpeg",
+    "static/media/poster1.jpg": "/copy-nike/static/media/poster1.69ded60f99407bc13d0c.jpg",
+    "static/media/poster2.jpg": "/copy-nike/static/media/poster2.ed8b6f2b6e916f16dbb0.jpg",
+    "static/media/poster3.jpg": "/copy-nike/static/media/poster3.dd4562e7e3778583123f.jpg",
+    "static/media/poster4.jpg": "/copy-nike/static/media/poster4.d9518a20344f81f6a334.jpg",
+    "static/media/poster6.jpg": "/copy-nike/static/media/poster6.2e8839c0b6ec2389303c.jpg",
+    "static/media/skiMan2.jpg": "/copy-nike/static/media/skiMan2.674d8f8a675e99099641.jpg",
+    "static/media/poster5.jpg": "/copy-nike/static/media/poster5.8681b1ff6583f9a8cd11.jpg",
+    "static/media/nike-logo.png": "/copy-nike/static/media/nike-logo.d6bd7ec519e32c74366f.png",
+    "static/media/jordan-icon.png": "/copy-nike/static/media/jordan-icon.c63beb43f4b6e9f29e00.png",
+    "static/media/code.webp": "/copy-nike/static/media/code.fdc3c718a796615b034d.webp",
+    "index.html": "/copy-nike/index.html",
+    "main.df174e85.css.map": "/copy-nike/static/css/main.df174e85.css.map",
+    "main.3aa5cf88.js.map": "/copy-nike/static/js/main.3aa5cf88.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df174e85.css",
+    "static/js/main.3aa5cf88.js"
+  ]
+}

@@ -1,0 +1,38 @@
+.socialNetwork {
+    @apply flex w-1/2 justify-end gap-x-6;
+}
+.sn {
+    @apply w-10 h-10 rounded-full flex items-center cursor-pointer justify-center hover:bg-slate-200;
+    background-color: #393e4636;
+}
+@media (max-width: 1700px) {
+}
+@media (max-width: 1440px) {
+}
+@media (max-width: 1200px) {
+    .socialNetwork {
+        @apply flex h-28 justify-end gap-x-6 flex-wrap;
+        width: 33.3%;
+    }
+}
+@media (max-width: 992px) {
+    .socialNetwork {
+        @apply flex h-28 justify-end gap-x-6 flex-wrap;
+        width: 20%;
+    }
+}
+@media (max-width: 768px) {
+    .socialNetwork {
+        @apply flex w-1/4 h-28 justify-end gap-x-6 flex-wrap;
+    }
+}
+@media (max-width: 600px) {
+    .socialNetwork {
+        @apply flex w-full h-10 justify-start gap-x-6 flex-wrap;
+    }
+}
+@media (max-width: 576px) {
+    .socialNetwork {
+        @apply flex w-full h-10 justify-start gap-x-4 flex-wrap;
+    }
+}

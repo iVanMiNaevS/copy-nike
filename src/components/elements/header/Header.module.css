@@ -52,10 +52,9 @@ header ul {
 .mobRightPart {
     @apply flex w-56 justify-between items-center;
     display: none;
-    cursor: pointer;
 }
 .burger {
-    @apply w-8 h-6 flex flex-col justify-between;
+    @apply w-8 h-6 flex flex-col justify-between cursor-pointer;
 }
 .row {
     @apply w-full bg-darkColor;

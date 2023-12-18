@@ -70,7 +70,7 @@
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .last-section__text {
-        @apply text-white text-3xl h-12 pt-2;
+        @apply text-white text-3xl h-12 pt-2 whitespace-nowrap;
     }
     .last-section__nike-app {
         @apply pt-20 pb-8 px-12;

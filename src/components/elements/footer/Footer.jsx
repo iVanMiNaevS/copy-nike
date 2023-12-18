@@ -1,61 +1,14 @@
 import React from "react";
-import { useState } from "react";
 import styles from "./Footer.css";
-import { linksFooter } from "../../../contentArrs/linksFooter";
+import FLinks from "./FLinks";
+import SocialNetwork from "../../UI/SocialNetwork/SocialNetwork";
+
 function Footer() {
-    const [cols, setCols] = useState(linksFooter);
     return (
         <footer className={styles.footer}>
             <div className="links">
-                <div className="columns">
-                    {cols.map((col, index) => {
-                        const nameCol = Object.keys(col)[0];
-                        if (col[nameCol].title !== "") {
-                            return (
-                                <ul className={nameCol} key={index}>
-                                    <div className="title">
-                                        {col[nameCol].title}
-                                    </div>
-                                    {col[nameCol].links.map((link, index) => {
-                                        return (
-                                            <li
-                                                className="col__link"
-                                                key={index}
-                                            >
-                                                {link}
-                                            </li>
-                                        );
-                                    })}
-                                </ul>
-                            );
-                        }
-                        return (
-                            <ul className={nameCol} key={index}>
-                                {col[nameCol].links.map((link, index) => {
-                                    return (
-                                        <li className="title" key={index}>
-                                            {link}
-                                        </li>
-                                    );
-                                })}
-                            </ul>
-                        );
-                    })}
-                </div>
-                <div className="socialNetwork">
-                    <div className="twiter sn">
-                        <i className="bx bxl-twitter text-3xl"></i>
-                    </div>
-                    <div className="facebook sn">
-                        <i className="bx bxl-facebook text-3xl"></i>
-                    </div>
-                    <div className="youtube sn">
-                        <i className="bx bxl-youtube text-3xl"></i>
-                    </div>
-                    <div className="instagram sn">
-                        <i className="bx bxl-instagram text-3xl"></i>
-                    </div>
-                </div>
+                <FLinks />
+                <SocialNetwork stylesOut={""} />
             </div>
             <div className="cookie-and-terms">
                 <div className="footer__left-part">

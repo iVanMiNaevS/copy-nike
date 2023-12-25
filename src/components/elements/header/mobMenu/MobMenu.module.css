@@ -1,0 +1,16 @@
+.mobMenuBlur {
+  @apply w-screen h-screen backdrop-blur-sm absolute right-0 top-0;
+  background: rgba(0, 0, 0, 0.208);
+}
+.mobMenu {
+  @apply absolute w-[40vw] right-0 top-0 h-screen bg-lightGreen flex flex-col pt-4 px-6;
+}
+.close {
+  @apply text-right text-3xl;
+}
+.links {
+  @apply w-full text-3xl flex flex-col gap-6 font-medium;
+}
+.link {
+  @apply flex justify-between;
+}

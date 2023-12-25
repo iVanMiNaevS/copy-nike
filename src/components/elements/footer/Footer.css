@@ -10,13 +10,13 @@ footer .columns {
 }
 
 footer .title {
-    @apply text-xl font-semibold cursor-pointer pb-4;
+    @apply text-base font-semibold cursor-pointer pb-4;
 }
 footer .col1 .title:not(:first-child) {
     @apply pb-4;
 }
 footer .col__link {
-    @apply opacity-70 cursor-pointer font-semibold hover:opacity-100 hover:font-bold h-10;
+    @apply opacity-70 cursor-pointer text-sm font-semibold hover:opacity-100 hover:font-bold h-10;
     width: fit-content;
 }
 
@@ -139,7 +139,6 @@ footer .cookie-and-terms-links__item {
     }
     .footer__accordion-item.close .footer__accordion-body {
         @apply overflow-hidden border-b-0 border-b-darkColor opacity-0 max-h-0;
-        transition: 0.5s;
     }
 }
 @media (max-width: 576px) {

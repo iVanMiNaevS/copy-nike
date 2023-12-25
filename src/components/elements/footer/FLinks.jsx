@@ -28,7 +28,6 @@ function FLinks() {
                 [current]: true,
             });
         }
-        console.log(activeAccItems);
     }
 
     function createDefaultCol(col, nameCol) {

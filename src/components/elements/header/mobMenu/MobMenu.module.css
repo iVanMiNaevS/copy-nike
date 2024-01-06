@@ -1,16 +1,76 @@
+.wrapperForScroll {
+  @apply absolute top-0 -right-full w-screen z-40 h-screen overflow-y-auto overflow-x-hidden;
+}
+.wrapper {
+  @apply absolute top-0 -right-full w-screen h-[990px] z-40;
+  transition: 0.3s;
+}
+
+.wrapperForScroll.open {
+  @apply right-0;
+}
+.wrapper.open {
+  @apply right-0;
+}
 .mobMenuBlur {
-  @apply w-screen h-screen backdrop-blur-sm absolute right-0 top-0;
-  background: rgba(0, 0, 0, 0.208);
+  @apply w-full h-full right-0 absolute top-0;
+}
+.wrapper.open .mobMenuBlur {
+  animation: anim 0.6s 0.3s forwards;
 }
 .mobMenu {
-  @apply absolute w-[40vw] right-0 top-0 h-screen bg-lightGreen flex flex-col pt-4 px-6;
+  @apply w-[320px] right-0 top-0 h-full bg-lightGreen flex flex-row pt-4 px-5 absolute overflow-x-scroll;
+}
+.mainPanel {
+  @apply flex flex-col mr-5;
+  flex: 0 0 280px;
+}
+.secondPanel {
+  flex: 0 0 280px;
+  @apply mr-5;
+}
+.thirdPanel {
+  flex: 0 0 280px;
 }
 .close {
   @apply text-right text-3xl;
 }
 .links {
-  @apply w-full text-3xl flex flex-col gap-6 font-medium;
+  @apply w-full text-3xl flex flex-col gap-6 font-medium mt-4;
 }
 .link {
   @apply flex justify-between;
+}
+.jordan {
+  @apply flex items-center mt-10 mb-20;
+}
+.jordan span {
+  @apply ml-4 text-lg font-semibold tracking-wider;
+}
+
+.join_us {
+  @apply mb-6;
+}
+.text {
+  @apply text-2xl mb-9;
+  color: rgba(0, 0, 0, 0.7);
+}
+.text a {
+  @apply opacity-100 text-black;
+}
+.item {
+  @apply flex items-center gap-5 mb-4;
+}
+.item a {
+  @apply text-xl pt-1;
+}
+
+@keyframes anim {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    @apply backdrop-blur-[2px];
+    background: rgba(0, 0, 0, 0.2);
+  }
 }

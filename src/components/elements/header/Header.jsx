@@ -1,14 +1,19 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import DropList from "../dropList/DropList";
 import styles from "./Header.module.css";
-import MobMenu from "./mobMenu/MobMenu";
+import MMWrapper from "./mobMenu/MMWrapper";
 import Navigation from "./Navigation";
 
 function Header() {
   const [dropListIsOpen, setDropListIsOpen] = useState(false);
   const [dropListContent, setDropListContent] = useState("");
+  const [openMobMenu, setOpenMobMenu] = useState(false);
 
+  useEffect(() => {
+    document.body.classList.toggle("no-scroll");
+  }, [openMobMenu]);
   return (
     <>
       <header>
@@ -34,12 +39,15 @@ function Header() {
               <i className="bx bx-search text-3xl"></i>
               <i className="bx bx-shopping-bag text-3xl"></i>
               <i className="bx bx-user text-3xl"></i>
-              <div className={styles.burger}>
+              <div
+                className={styles.burger}
+                onClick={() => setOpenMobMenu(true)}
+              >
                 <div className={styles.row}></div>
                 <div className={styles.row}></div>
                 <div className={styles.row}></div>
               </div>
-              <MobMenu />
+              <MMWrapper toggleMenu={setOpenMobMenu} open={openMobMenu} />
             </div>
           </div>
         </div>

@@ -1,6 +1,9 @@
 header {
   @apply bg-lightGreen w-full z-20 relative;
 }
+header .wrapper {
+  @apply z-20;
+}
 .headerPart {
   @apply flex justify-between;
 }

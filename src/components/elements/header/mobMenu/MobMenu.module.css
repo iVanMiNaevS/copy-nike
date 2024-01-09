@@ -19,18 +19,32 @@
   animation: anim 0.6s 0.3s forwards;
 }
 .mobMenu {
-  @apply w-[320px] right-0 top-0 h-full bg-lightGreen flex flex-row pt-4 px-5 absolute overflow-x-scroll;
+  @apply w-[320px] right-0 top-0 h-full bg-lightGreen flex flex-row pt-4 px-5 absolute overflow-x-hidden;
 }
+.show {
+  @apply translate-x-0;
+  transition: 0.25s;
+}
+.hideRight {
+  @apply translate-x-[300px] !important;
+  transition: 0.25s;
+}
+.hideLeft {
+  @apply -translate-x-[300px] !important;
+  transition: 0.25s;
+}
+
 .mainPanel {
-  @apply flex flex-col mr-5;
-  flex: 0 0 280px;
+  @apply flex flex-col mr-5 absolute top-4 left-5 translate-x-0;
+  transition: 0.25s;
 }
 .secondPanel {
-  flex: 0 0 280px;
-  @apply mr-5;
+  @apply mr-5 absolute top-4 left-5 w-[280px] translate-x-0;
+  transition: 0.25s;
 }
 .thirdPanel {
-  flex: 0 0 280px;
+  @apply absolute top-4 left-5 w-[280px] translate-x-0;
+  transition: 0.25s;
 }
 .close {
   @apply text-right text-3xl;

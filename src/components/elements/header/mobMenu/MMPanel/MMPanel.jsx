@@ -1,11 +1,16 @@
 import React from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "./MMPanel.module.css";
 
-function MMPanel({ panelLinks, changeContent, lastPanel }) {
+function MMPanel({ panelLinks, changeContent, lastPanel, scrollHandlers }) {
+  const panel = useRef(null);
   return (
-    <div className={styles.panel}>
-      <div className={styles.panelHeader}>
+    <div className={styles.panel} ref={panel}>
+      <div
+        className={styles.panelHeader}
+        onClick={() => scrollHandlers.scrollLeft(panel)}
+      >
         <i className="bx bx-chevron-left"></i>
         <div>{panelLinks.prevPanel}</div>
       </div>
@@ -19,6 +24,7 @@ function MMPanel({ panelLinks, changeContent, lastPanel }) {
                 className={styles.panelLink}
                 onClick={() => {
                   changeContent(link, panelLinks.title);
+                  scrollHandlers.scrollRight(panel);
                 }}
               >
                 <span>{link}</span>

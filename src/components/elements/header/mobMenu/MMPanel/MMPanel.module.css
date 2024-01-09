@@ -13,7 +13,7 @@
   @apply w-full text-xl flex flex-col gap-6 font-bold opacity-50 mt-8;
 }
 .panelLink {
-  @apply flex justify-between;
+  @apply flex justify-between h-9;
 }
 .panelLink i {
   @apply text-3xl font-medium;

@@ -7,6 +7,8 @@ import MMServices from "./MMServices";
 import { contentPanel1, contentPanel2 } from "./MMLinksForPanel";
 import MMLinks from "./MMLinks";
 import styles from "./MobMenu.module.css";
+import { useRef } from "react";
+import { joinClasses } from "../../../../utils/joinClasses";
 
 function MobMenu({ toggleMenu }) {
   const [linksForPanel1, setLinksForPanel1] = useState({
@@ -25,14 +27,41 @@ function MobMenu({ toggleMenu }) {
   function changeContentMMPanel2(link, prevPanel) {
     setLinksForPanel2({ ...contentPanel2[link], prevPanel: prevPanel });
   }
+  const mainPanel = useRef(null);
+  function scrollRight(el) {
+    const panel = el.current;
+    if (panel.parentNode.nodeName === "NAV") {
+      panel.classList.add(`${styles.hideLeft}`);
+      panel.nextElementSibling.classList.remove(`${styles.hideRight}`);
+    } else {
+      panel.parentNode.previousElementSibling.classList.add(
+        `${styles.hideLeft}`
+      );
+      panel.parentNode.classList.add(`${styles.hideLeft}`);
+      panel.parentNode.nextElementSibling.classList.remove(
+        `${styles.hideRight}`
+      );
+    }
+  }
+  function scrollLeft(el) {
+    const panel = el.current;
+    panel.parentNode.previousElementSibling.classList.remove(
+      `${styles.hideLeft}`
+    );
+    panel.parentNode.classList.add(`${styles.hideRight}`);
+  }
   return (
     <nav className={styles.mobMenu}>
-      <div className={styles.mainPanel}>
+      <div className={styles.mainPanel} ref={mainPanel}>
         <div className={styles.close} onClick={() => toggleMenu(false)}>
           <i className="bx bx-x"></i>
         </div>
 
-        <MMLinks changeContent={changeContentMMPanel1} />
+        <MMLinks
+          changeContent={changeContentMMPanel1}
+          scrollRightHandler={scrollRight}
+          mainPanel={mainPanel}
+        />
         <div className={styles.jordan}>
           <img
             src={require("../../../../img/holl-page/jordan-icon.png")}
@@ -55,14 +84,19 @@ function MobMenu({ toggleMenu }) {
         </div>
         <MMServices />
       </div>
-      <div className={styles.secondPanel}>
+      <div className={joinClasses(styles.secondPanel, styles.hideRight)}>
         <MMPanel
           panelLinks={linksForPanel1}
           changeContent={changeContentMMPanel2}
+          scrollHandlers={{ scrollRight, scrollLeft }}
         />
       </div>
-      <div className={styles.thirdPanel}>
-        <MMPanel panelLinks={linksForPanel2} lastPanel={true} />
+      <div className={joinClasses(styles.thirdPanel, styles.hideRight)}>
+        <MMPanel
+          panelLinks={linksForPanel2}
+          lastPanel={true}
+          scrollHandlers={{ scrollLeft }}
+        />
       </div>
     </nav>
   );

@@ -12,7 +12,9 @@ function Header() {
   const [openMobMenu, setOpenMobMenu] = useState(false);
 
   useEffect(() => {
-    document.body.classList.toggle("no-scroll");
+    openMobMenu
+      ? document.body.classList.add("no-scroll")
+      : document.body.classList.remove("no-scroll");
   }, [openMobMenu]);
   return (
     <>

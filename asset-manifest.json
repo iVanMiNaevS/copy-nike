@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/copy-nike/static/css/main.a01bd1ba.css",
+    "main.css": "/copy-nike/static/css/main.1b54873e.css",
     "main.js": "/copy-nike/static/js/main.9c77850d.js",
     "static/media/green3.jpeg": "/copy-nike/static/media/green3.b60ca835e2007853e8b2.jpeg",
     "static/media/green5.jpg": "/copy-nike/static/media/green5.d0d9d261fe69afd90ad2.jpg",
@@ -19,11 +19,11 @@
     "static/media/jordan-icon.png": "/copy-nike/static/media/jordan-icon.c63beb43f4b6e9f29e00.png",
     "static/media/code.webp": "/copy-nike/static/media/code.fdc3c718a796615b034d.webp",
     "index.html": "/copy-nike/index.html",
-    "main.a01bd1ba.css.map": "/copy-nike/static/css/main.a01bd1ba.css.map",
+    "main.1b54873e.css.map": "/copy-nike/static/css/main.1b54873e.css.map",
     "main.9c77850d.js.map": "/copy-nike/static/js/main.9c77850d.js.map"
   },
   "entrypoints": [
-    "static/css/main.a01bd1ba.css",
+    "static/css/main.1b54873e.css",
     "static/js/main.9c77850d.js"
   ]
 }

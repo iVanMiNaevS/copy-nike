@@ -1,13 +1,13 @@
 import React from "react";
-import MySlider from "../../../UI/MySlider/MySlider";
+import MySlider from "../../../../UI/MySlider/MySlider";
 
-import poster1 from "../../../../img/NWC/slider2/poster1.jpg";
-import poster2 from "../../../../img/NWC/slider2/poster2.jpg";
-import poster3 from "../../../../img/NWC/slider2/poster3.jpg";
-import poster4 from "../../../../img/NWC/slider2/poster4.jpg";
-import poster5 from "../../../../img/NWC/slider2/poster5.jpg";
-import poster6 from "../../../../img/NWC/slider2/poster6.jpg";
-import MyButtontLink from "../../../UI/MyButton-Link/MyButtonLink";
+import poster1 from "../../../../../img/NWC/slider2/poster1.jpg";
+import poster2 from "../../../../../img/NWC/slider2/poster2.jpg";
+import poster3 from "../../../../../img/NWC/slider2/poster3.jpg";
+import poster4 from "../../../../../img/NWC/slider2/poster4.jpg";
+import poster5 from "../../../../../img/NWC/slider2/poster5.jpg";
+import poster6 from "../../../../../img/NWC/slider2/poster6.jpg";
+import MyButtontLink from "../../../../UI/MyButton-Link/MyButtonLink";
 function NWCSliderCome() {
   const itemsForSlider = [
     {

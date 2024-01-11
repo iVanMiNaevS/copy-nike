@@ -1,7 +1,7 @@
 import React from "react";
 import MMLink from "./MMLink";
-import links from "../linksForHeader";
-import styles from "./MobMenu.module.css";
+import links from "../../linksForHeader";
+import styles from "../MobMenu.module.css";
 function MMLinks({ changeContent, scrollRightHandler, mainPanel }) {
   return (
     <ul className={styles.links}>

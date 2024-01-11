@@ -1,5 +1,6 @@
 .wrapperForScroll {
-  @apply absolute top-0 -right-full w-screen z-40 h-screen overflow-y-auto overflow-x-hidden;
+  @apply absolute top-0 -right-full w-screen z-40 h-screen overflow-y-hidden overflow-x-hidden;
+  transition: 0.3s;
 }
 .wrapper {
   @apply absolute top-0 -right-full w-screen h-[990px] z-40;
@@ -7,7 +8,8 @@
 }
 
 .wrapperForScroll.open {
-  @apply right-0;
+  @apply right-0 overflow-y-auto;
+  transition: 0.3s;
 }
 .wrapper.open {
   @apply right-0;
@@ -20,6 +22,7 @@
 }
 .mobMenu {
   @apply w-[320px] right-0 top-0 h-full bg-lightGreen flex flex-row pt-4 px-5 absolute overflow-x-hidden;
+  transition: 0.3s;
 }
 .show {
   @apply translate-x-0;

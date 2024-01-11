@@ -1,11 +1,11 @@
 import React from "react";
 import MyButtonLink from "../../../UI/MyButton-Link/MyButtonLink";
 import { Link } from "react-router-dom";
-import MMPanel from "./MMPanel/MMPanel";
+import MMPanel from "./childComponents/MMPanel/MMPanel";
 import { useState } from "react";
-import MMServices from "./MMServices";
+import MMServices from "./childComponents/MMServices";
 import { contentPanel1, contentPanel2 } from "./MMLinksForPanel";
-import MMLinks from "./MMLinks";
+import MMLinks from "./childComponents/MMLinks";
 import styles from "./MobMenu.module.css";
 import { useRef } from "react";
 import { joinClasses } from "../../../../utils/joinClasses";

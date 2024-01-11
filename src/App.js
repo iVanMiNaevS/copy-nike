@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, Route, Routes } from "react-router-dom";
-import Shoes from "./components/page/Shoes";
-import About from "./components/page/About";
+import Shoes from "./components/page/Shoes/Shoes";
+import About from "./components/page/About/About";
 import HollPage from "./components/page/HollPage/HollPage";
 import Layout from "./components/Layout";
 import NWC from "./components/page/NWC/NWC";

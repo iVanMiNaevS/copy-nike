@@ -1,9 +1,9 @@
 import React from "react";
-import MySlider from "../../../UI/MySlider/MySlider";
-import poster1 from "../../../../img/NWC/slider1/poster1.jpg";
-import poster2 from "../../../../img/NWC/slider1/poster2.jpg";
-import poster3 from "../../../../img/NWC/slider1/poster3.jpg";
-import MyButtontLink from "../../../UI/MyButton-Link/MyButtonLink";
+import MySlider from "../../../../UI/MySlider/MySlider";
+import poster1 from "../../../../../img/NWC/slider1/poster1.jpg";
+import poster2 from "../../../../../img/NWC/slider1/poster2.jpg";
+import poster3 from "../../../../../img/NWC/slider1/poster3.jpg";
+import MyButtontLink from "../../../../UI/MyButton-Link/MyButtonLink";
 
 function NWCSliderLife() {
   const itemsForSlider = [

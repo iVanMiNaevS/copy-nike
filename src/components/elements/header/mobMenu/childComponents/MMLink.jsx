@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./MobMenu.module.css";
+import styles from "../MobMenu.module.css";
 function MMLink({ link, changeContent, scrollRightHandler, mainPanel }) {
   return (
     <li

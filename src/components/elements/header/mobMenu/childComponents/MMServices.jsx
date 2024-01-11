@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./MobMenu.module.css";
+import styles from "../MobMenu.module.css";
 function MMServices() {
   return (
     <div>

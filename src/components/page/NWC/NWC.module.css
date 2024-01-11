@@ -1,323 +1,333 @@
 .nwc {
-    /* @apply bg-slate-200; */
+  /* @apply bg-slate-200; */
 }
 
 .container {
-    width: 1000px;
-    margin: 0 auto;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .h2Layer {
-    @apply text-3xl font-extrabold pb-4;
+  @apply text-3xl font-extrabold pb-4;
 }
 
 .pLayer {
-    @apply text-2xl text-black font-medium text-left;
+  @apply text-2xl text-black font-medium text-left;
 }
 
 .headerPart {
-    width: 100%;
-    height: 30vw;
-    background-size: cover;
-    background-position: 0 -15vw;
-    background-repeat: no-repeat;
-    background-image: url(../../../img/NWC/winter-mount.jpg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 30vw;
+  background-size: cover;
+  background-position: 0 -15vw;
+  background-repeat: no-repeat;
+  background-image: url(../../../img/NWC/winter-mount.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .headerPart div {
-    position: relative;
+  position: relative;
 }
 .headerPart div::before {
-    content: "";
-    background-image: url(../../../img/holl-page/nike-logo.png);
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    bottom: 10px;
+  content: "";
+  background-image: url(../../../img/holl-page/nike-logo.png);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
 }
 .headerPartIcon {
-    @apply flex items-center justify-center w-60 h-40 rounded-3xl bg-white text-black font-black text-6xl;
+  @apply flex items-center justify-center w-60 h-40 rounded-3xl bg-white text-black font-black text-6xl;
 }
 .begin {
-    padding-top: 40px;
-    padding-bottom: 150px;
-    text-align: center;
+  padding-top: 40px;
+  padding-bottom: 150px;
+  text-align: center;
 }
 .whyNWCImg {
-    @apply mx-auto rounded-2xl;
+  @apply mx-auto rounded-2xl;
 }
 .whyNWC {
-    @apply pt-16  pb-28;
+  @apply pt-16  pb-28;
 }
 
 .mountTravelBg {
-    background-image: url("../../../img/NWC/mount-mans.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 -10vw;
-    width: 100%;
-    height: 40vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-image: url("../../../img/NWC/mount-mans.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -10vw;
+  width: 100%;
+  height: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .mountTravelBgIcon {
-    @apply rounded-3xl bg-darkColor text-white w-80 h-48 flex items-center text-4xl justify-center font-black;
+  @apply rounded-3xl bg-darkColor text-white w-80 h-48 flex items-center text-4xl justify-center font-black;
 }
 .mountTravel__text {
-    @apply pt-16 pb-28;
+  @apply pt-16 pb-28;
 }
 .mountTravel__text p {
-    @apply pb-12;
+  @apply pb-12;
 }
 .wantMove {
-    @apply pt-5 pb-28;
+  @apply pt-5 pb-28;
 }
 
 .snowBoardMan {
-    width: 1500px;
-    margin: 0 auto;
-    @apply rounded-3xl;
+  width: 1500px;
+  margin: 0 auto;
+  @apply rounded-3xl;
 }
 
 .app {
-    padding-top: 64px;
-    padding-bottom: 64px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 .app p {
-    padding-bottom: 14px;
+  padding-bottom: 14px;
 }
 
 .end {
-    padding-top: 64px;
+  padding-top: 64px;
 }
 
 .end img {
-    padding-top: 40px;
-    margin: 0 auto;
-    padding-bottom: 30px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  object-fit: cover;
+  min-height: 200px;
 }
 
 .center {
-    text-align: center;
-    padding-bottom: 80px;
+  text-align: center;
+  padding-bottom: 80px;
 }
 @media (min-width: 320px) {
-    .container {
-        width: 100%;
-        margin: 0 auto;
-    }
-    .mountTravelBg {
-        background-position: 0 -4vw;
-        width: 100%;
-        height: 46vw;
-    }
-    .headerPart {
-        width: 100%;
-        height: 40vw;
-        background-position: 0 -5vw;
-    }
-    .headerPartIcon {
-        @apply flex items-center justify-center w-52 h-32 rounded-3xl bg-white text-black font-black text-5xl;
-    }
-    .headerPart div::before {
-        bottom: 3px;
-    }
-    .whyNWCImg {
-        width: 500px;
-    }
-    .mountTravelBgIcon {
-        width: 290px;
-        height: 180px;
-    }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+  }
+  .mountTravelBg {
+    background-position: 0 0vw;
+    width: 100%;
+    height: 60vw;
+  }
+  .headerPart {
+    width: 100%;
+    height: 60vw;
+    background-position: 0 -1vw;
+  }
+  .headerPartIcon {
+    @apply flex items-center justify-center w-40 h-28 rounded-3xl bg-white text-black font-black text-4xl;
+  }
+  .headerPart div::before {
+    bottom: 3px;
+  }
+  .whyNWCImg {
+    width: 500px;
+  }
+  .mountTravelBgIcon {
+    width: 160px;
+    height: 112px;
+    text-align: center;
+    @apply text-3xl;
+  }
+  .snowBoardMan {
+    object-fit: cover;
+    min-height: 300px;
+  }
 }
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    .container {
-        width: 100%;
-        margin: 0 auto;
-    }
-    .mountTravelBg {
-        background-position: 0 0vw;
-        width: 100%;
-        height: 70vw;
-    }
-    .headerPart {
-        width: 100%;
-        height: 55vw;
-        background-position: 0 -5vw;
-    }
-    .headerPartIcon {
-        @apply flex items-center justify-center w-52 h-32 rounded-3xl bg-white text-black font-black text-5xl;
-    }
-    .headerPart div::before {
-        bottom: 3px;
-    }
-    .whyNWCImg {
-        width: 500px;
-    }
-    .mountTravelBgIcon {
-        width: 290px;
-        height: 180px;
-    }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+  }
+  .mountTravelBg {
+    background-position: 0 0vw;
+    width: 100%;
+    height: 70vw;
+  }
+  .headerPart {
+    width: 100%;
+    height: 55vw;
+    background-position: 0 -5vw;
+  }
+  .headerPartIcon {
+    @apply flex items-center justify-center w-52 h-32 rounded-3xl bg-white text-black font-black text-5xl;
+  }
+  .headerPart div::before {
+    bottom: 3px;
+  }
+  .whyNWCImg {
+    width: 500px;
+  }
+  .mountTravelBgIcon {
+    width: 290px;
+    height: 180px;
+  }
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .container {
-        width: 740px;
-        margin: 0 auto;
-    }
-    .mountTravelBg {
-        background-position: 0 0vw;
-        width: 100%;
-        height: 65vw;
-    }
-    .headerPart {
-        width: 100%;
-        height: 50vw;
-        background-position: 0 -5vw;
-    }
-    .headerPartIcon {
-        @apply flex items-center justify-center w-52 h-32 rounded-3xl bg-white text-black font-black text-5xl;
-    }
-    .headerPart div::before {
-        bottom: 3px;
-    }
-    .whyNWCImg {
-        width: 500px;
-    }
-    .mountTravelBgIcon {
-        width: 290px;
-        height: 180px;
-    }
+  .container {
+    width: 740px;
+    margin: 0 auto;
+  }
+  .mountTravelBg {
+    background-position: 0 0vw;
+    width: 100%;
+    height: 65vw;
+  }
+  .headerPart {
+    width: 100%;
+    height: 50vw;
+    background-position: 0 -5vw;
+  }
+  .headerPartIcon {
+    @apply flex items-center justify-center w-52 h-32 rounded-3xl bg-white text-black font-black text-5xl;
+  }
+  .headerPart div::before {
+    bottom: 3px;
+  }
+  .whyNWCImg {
+    width: 500px;
+  }
+  .mountTravelBgIcon {
+    width: 290px;
+    height: 180px;
+  }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .container {
-        width: 992px;
-        margin: 0 auto;
-    }
-    .mountTravelBg {
-        background-position: 0 -4vw;
-        width: 100%;
-        height: 46vw;
-    }
-    .headerPart {
-        width: 100%;
-        height: 40vw;
-        background-position: 0 -5vw;
-    }
-    .headerPart div::before {
-        width: 50px;
-        height: 50px;
-        bottom: 10px;
-    }
-    .headerPartIcon {
-        @apply flex items-center justify-center w-60 h-40 rounded-3xl bg-white text-black font-black text-6xl;
-    }
-    .whyNWCImg {
-        width: 500px;
-    }
-    .mountTravelBgIcon {
-        @apply rounded-3xl bg-darkColor text-white w-80 h-48 flex items-center text-4xl justify-center font-black;
-    }
+  .container {
+    width: 992px;
+    margin: 0 auto;
+  }
+  .mountTravelBg {
+    background-position: 0 -4vw;
+    width: 100%;
+    height: 46vw;
+  }
+  .headerPart {
+    width: 100%;
+    height: 40vw;
+    background-position: 0 -5vw;
+  }
+  .headerPart div::before {
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+  }
+  .headerPartIcon {
+    @apply flex items-center justify-center w-60 h-40 rounded-3xl bg-white text-black font-black text-6xl;
+  }
+  .whyNWCImg {
+    width: 500px;
+  }
+  .mountTravelBgIcon {
+    @apply rounded-3xl bg-darkColor text-white w-80 h-48 flex items-center text-4xl justify-center font-black;
+  }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .container {
-        width: 1000px;
-        margin: 0 auto;
-    }
-    .mountTravelBg {
-        background-position: 0 -4vw;
-        width: 100%;
-        height: 46vw;
-    }
-    .headerPart {
-        width: 100%;
-        height: 35vw;
-        background-position: 0 -10vw;
-    }
-    .headerPart div::before {
-        width: 50px;
-        height: 50px;
-        bottom: 10px;
-    }
-    .headerPartIcon {
-        @apply flex items-center justify-center w-60 h-40 rounded-3xl bg-white text-black font-black text-6xl;
-    }
-    .whyNWCImg {
-        width: 640px;
-    }
-    .mountTravelBgIcon {
-        @apply rounded-3xl bg-darkColor text-white w-80 h-48 flex items-center text-4xl justify-center font-black;
-    }
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .mountTravelBg {
+    background-position: 0 -4vw;
+    width: 100%;
+    height: 46vw;
+  }
+  .headerPart {
+    width: 100%;
+    height: 35vw;
+    background-position: 0 -10vw;
+  }
+  .headerPart div::before {
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+  }
+  .headerPartIcon {
+    @apply flex items-center justify-center w-60 h-40 rounded-3xl bg-white text-black font-black text-6xl;
+  }
+  .whyNWCImg {
+    width: 640px;
+  }
+  .mountTravelBgIcon {
+    @apply rounded-3xl bg-darkColor text-white w-80 h-48 flex items-center text-4xl justify-center font-black;
+  }
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1440px) {
-    .container {
-        width: 1000px;
-        margin: 0 auto;
-    }
-    .mountTravelBg {
-        background-position: 0 -9vw;
-        width: 100%;
-        height: 44vw;
-    }
-    .headerPart {
-        width: 100%;
-        height: 30vw;
-        background-position: 0 -15vw;
-    }
-    .headerPart div::before {
-        width: 50px;
-        height: 50px;
-        bottom: 10px;
-    }
-    .headerPartIcon {
-        @apply flex items-center justify-center w-60 h-40 rounded-3xl bg-white text-black font-black text-6xl;
-    }
-    .whyNWCImg {
-        width: 640px;
-    }
-    .mountTravelBgIcon {
-        @apply rounded-3xl bg-darkColor text-white w-80 h-48 flex items-center text-4xl justify-center font-black;
-    }
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .mountTravelBg {
+    background-position: 0 -9vw;
+    width: 100%;
+    height: 44vw;
+  }
+  .headerPart {
+    width: 100%;
+    height: 30vw;
+    background-position: 0 -15vw;
+  }
+  .headerPart div::before {
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+  }
+  .headerPartIcon {
+    @apply flex items-center justify-center w-60 h-40 rounded-3xl bg-white text-black font-black text-6xl;
+  }
+  .whyNWCImg {
+    width: 640px;
+  }
+  .mountTravelBgIcon {
+    @apply rounded-3xl bg-darkColor text-white w-80 h-48 flex items-center text-4xl justify-center font-black;
+  }
 }
 @media (min-width: 1700px) {
-    .container {
-        width: 1000px;
-        margin: 0 auto;
-    }
-    .mountTravelBg {
-        background-position: 0 -10vw;
-        width: 100%;
-        height: 40vw;
-    }
-    .headerPart {
-        width: 100%;
-        height: 30vw;
-        background-position: 0 -15vw;
-    }
-    .headerPart div::before {
-        width: 50px;
-        height: 50px;
-        bottom: 10px;
-    }
-    .headerPartIcon {
-        @apply flex items-center justify-center w-60 h-40 rounded-3xl bg-white text-black font-black text-6xl;
-    }
-    .whyNWCImg {
-        width: 640px;
-    }
-    .mountTravelBgIcon {
-        @apply rounded-3xl bg-darkColor text-white w-80 h-48 flex items-center text-4xl justify-center font-black;
-    }
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .mountTravelBg {
+    background-position: 0 -10vw;
+    width: 100%;
+    height: 40vw;
+  }
+  .headerPart {
+    width: 100%;
+    height: 30vw;
+    background-position: 0 -15vw;
+  }
+  .headerPart div::before {
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+  }
+  .headerPartIcon {
+    @apply flex items-center justify-center w-60 h-40 rounded-3xl bg-white text-black font-black text-6xl;
+  }
+  .whyNWCImg {
+    width: 640px;
+  }
+  .mountTravelBgIcon {
+    @apply rounded-3xl bg-darkColor text-white w-80 h-48 flex items-center text-4xl justify-center font-black;
+  }
 }

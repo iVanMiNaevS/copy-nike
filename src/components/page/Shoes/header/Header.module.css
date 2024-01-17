@@ -1,0 +1,25 @@
+.header {
+  @apply w-full flex justify-between items-center;
+  grid-column: 1/3;
+}
+.titlePage {
+  @apply text-4xl;
+}
+.rightPart {
+  @apply flex gap-24 text-xl font-medium;
+}
+.hideFilters {
+  @apply flex gap-4 items-center;
+}
+.hideFilters span {
+}
+.hideFilters img {
+  @apply w-8;
+}
+.sort {
+  @apply flex gap-4 items-center;
+}
+.dropDown {
+  @apply absolute;
+  display: none;
+}

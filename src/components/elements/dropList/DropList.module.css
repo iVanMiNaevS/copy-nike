@@ -1,5 +1,5 @@
 .dropList {
-  @apply w-full absolute -translate-y-60;
+  @apply w-full absolute -translate-y-60 z-10;
   transition: 0.5s transform;
 }
 

@@ -4,7 +4,7 @@ import { joinClasses } from "../../../../utils/joinClasses";
 function FilterColor() {
   const colors = [
     { color: "black" },
-    { color: "grey" },
+    { color: "gray" },
     { color: "green" },
     { color: "red" },
     { color: "yellow" },
@@ -18,10 +18,10 @@ function FilterColor() {
   return (
     <div className={styles.filterColor}>
       <div className={styles.header}>
-        <span>Size</span>
+        <span>Colors</span>
         <i className="bx bxs-down-arrow"></i>
       </div>
-      <div className={styles.body}>
+      <div className={styles.bodyColor}>
         {colors.map((color) => {
           return (
             <button key={color.color}>

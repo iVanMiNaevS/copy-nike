@@ -8,7 +8,7 @@ function Filters() {
     { title: "Gender", property: ["Men", "Women", "Unisex"], id: 1 },
     {
       title: "Shop By Price",
-      property: ["$0-$50", "$50-$100", "$100-$150", "$150+"],
+      property: ["$0 - $50", "$50 - $100", "$100 - $150", "$150+"],
       id: 2,
     },
     {

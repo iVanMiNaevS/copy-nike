@@ -20,7 +20,7 @@ function FilterSize() {
         <span>Size</span>
         <i className="bx bxs-down-arrow"></i>
       </div>
-      <div className={styles.body}>
+      <div className={styles.bodySize}>
         {size.map((size) => {
           return (
             <button key={size} className={styles.checkBoxSize}>

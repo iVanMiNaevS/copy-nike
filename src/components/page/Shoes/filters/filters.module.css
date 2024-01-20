@@ -1,4 +1,6 @@
 .filters {
+  max-height: 1400px;
+  overflow-y: auto;
 }
 .defaultFilter span {
   @apply hover:text-gray-400;
@@ -12,13 +14,13 @@
 }
 
 .body {
-  @apply overflow-hidden flex flex-col gap-1 mt-4;
+  @apply flex flex-col gap-1 mt-4 overflow-hidden;
 }
 .body button {
-  @apply flex gap-4 items-center;
+  @apply flex items-center gap-4;
 }
 .checkBox {
-  @apply w-6 h-6 rounded-md border-2 border-gray-300;
+  @apply w-6 h-6 border-2 border-gray-300 rounded-md;
 }
 .filterSize {
   @apply py-4 text-xl font-medium;
@@ -33,7 +35,7 @@
   gap: 10px;
 }
 .checkBoxSize {
-  @apply border-2 border-gray-300 rounded-md hover:border-black transition-all;
+  @apply transition-all border-2 border-gray-300 rounded-md hover:border-black;
 }
 .filterColor {
   @apply py-4 text-xl font-medium;
@@ -46,14 +48,14 @@
   grid-auto-rows: 1fr;
 }
 .bodyColor button {
-  @apply flex flex-col items-center gap-1;
+  @apply flex flex-col items-center gap-1 hover:text-gray-400;
 }
 .color {
-  @apply w-7 h-7 rounded-full;
+  @apply rounded-full w-7 h-7;
   border: 1px solid rgba(128, 128, 128, 0.196);
 }
 .nameColor {
-  @apply text-center hover:text-gray-400;
+  @apply text-center;
 }
 .MultiColor {
   background-image: url(../../../../img/multiColorBg2.jpg);

@@ -1,29 +1,40 @@
 {
   "files": {
-    "main.css": "/copy-nike/static/css/main.1b54873e.css",
-    "main.js": "/copy-nike/static/js/main.9c77850d.js",
+    "main.css": "/copy-nike/static/css/main.0e2262dc.css",
+    "main.js": "/copy-nike/static/js/main.2b681d4c.js",
     "static/media/green3.jpeg": "/copy-nike/static/media/green3.b60ca835e2007853e8b2.jpeg",
     "static/media/green5.jpg": "/copy-nike/static/media/green5.d0d9d261fe69afd90ad2.jpg",
     "static/media/winter-mount.jpg": "/copy-nike/static/media/winter-mount.6ffeab2d33d9af7f04b3.jpg",
     "static/media/nike-shoes.png": "/copy-nike/static/media/nike-shoes.0cff98ae23033035dbac.png",
     "static/media/mount-mans.jpg": "/copy-nike/static/media/mount-mans.94e6516c902fac2e8122.jpg",
+    "static/media/multiColorBg2.jpg": "/copy-nike/static/media/multiColorBg2.27a70f5b042c339f61e7.jpg",
     "static/media/snowboardman.jpeg": "/copy-nike/static/media/snowboardman.ad383c289b0d4795d891.jpeg",
     "static/media/poster1.jpg": "/copy-nike/static/media/poster1.69ded60f99407bc13d0c.jpg",
     "static/media/poster2.jpg": "/copy-nike/static/media/poster2.ed8b6f2b6e916f16dbb0.jpg",
     "static/media/poster3.jpg": "/copy-nike/static/media/poster3.dd4562e7e3778583123f.jpg",
+    "static/media/air-force-1-07.png": "/copy-nike/static/media/air-force-1-07.e052ffdce9bf7d2d8f71.png",
     "static/media/poster4.jpg": "/copy-nike/static/media/poster4.d9518a20344f81f6a334.jpg",
     "static/media/poster6.jpg": "/copy-nike/static/media/poster6.2e8839c0b6ec2389303c.jpg",
     "static/media/skiMan2.jpg": "/copy-nike/static/media/skiMan2.674d8f8a675e99099641.jpg",
     "static/media/poster5.jpg": "/copy-nike/static/media/poster5.8681b1ff6583f9a8cd11.jpg",
+    "static/media/custom-nike-air-force-1-high-by-you-shoes.jpg": "/copy-nike/static/media/custom-nike-air-force-1-high-by-you-shoes.978814ee6e100e629054.jpg",
+    "static/media/filter-ico.png": "/copy-nike/static/media/filter-ico.151943534ef73cd8fa7a.png",
+    "static/media/air-jordan-1-zoom-air-cmft-2-shoes-b35MTM.png": "/copy-nike/static/media/air-jordan-1-zoom-air-cmft-2-shoes-b35MTM.074251b1de662e872235.png",
+    "static/media/air-jordan-1-zoom-cmft-2-shoes-2W3NJM.png": "/copy-nike/static/media/air-jordan-1-zoom-cmft-2-shoes-2W3NJM.39dec5d92aeaf53ad2f8.png",
+    "static/media/v2k-run-shoes-4CJ5WW.png": "/copy-nike/static/media/v2k-run-shoes-4CJ5WW.58fb55e77ce20b1465d0.png",
     "static/media/nike-logo.png": "/copy-nike/static/media/nike-logo.d6bd7ec519e32c74366f.png",
+    "static/media/air-jordan-1-low-se-shoes-Z8CHrq.png": "/copy-nike/static/media/air-jordan-1-low-se-shoes-Z8CHrq.2e9074b4d1bfec57b6ef.png",
+    "static/media/air-jordan-1-low-g-golf-shoes-0P1HcH.png": "/copy-nike/static/media/air-jordan-1-low-g-golf-shoes-0P1HcH.53991d358b2c46f18763.png",
     "static/media/jordan-icon.png": "/copy-nike/static/media/jordan-icon.c63beb43f4b6e9f29e00.png",
+    "static/media/blazer-mid-77-vintage-shoes-3x983t.png": "/copy-nike/static/media/blazer-mid-77-vintage-shoes-3x983t.39e98de40ae6df167e4f.png",
+    "static/media/court-vision-mid-next-nature-shoes-HFkwn1.png": "/copy-nike/static/media/court-vision-mid-next-nature-shoes-HFkwn1.09476c3b9930dcd4c1f0.png",
     "static/media/code.webp": "/copy-nike/static/media/code.fdc3c718a796615b034d.webp",
     "index.html": "/copy-nike/index.html",
-    "main.1b54873e.css.map": "/copy-nike/static/css/main.1b54873e.css.map",
-    "main.9c77850d.js.map": "/copy-nike/static/js/main.9c77850d.js.map"
+    "main.0e2262dc.css.map": "/copy-nike/static/css/main.0e2262dc.css.map",
+    "main.2b681d4c.js.map": "/copy-nike/static/js/main.2b681d4c.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b54873e.css",
-    "static/js/main.9c77850d.js"
+    "static/css/main.0e2262dc.css",
+    "static/js/main.2b681d4c.js"
   ]
 }

@@ -1,9 +1,14 @@
 import React from "react";
 import styles from "./Header.module.css";
 
-function Sort() {
+function Sort({ openDropdown }) {
   return (
-    <button className={styles.sort}>
+    <button
+      className={styles.sort}
+      onClick={() => {
+        openDropdown((prev) => !prev);
+      }}
+    >
       <span>Sort</span>
       <i className="bx bxs-down-arrow"></i>
     </button>

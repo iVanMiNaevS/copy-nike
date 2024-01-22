@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./filters.module.css";
+import { joinClasses } from "../../../../utils/joinClasses";
+import Filter from "./helpersComp/Filter";
 function FilterSize() {
   const size = [
     "38",
@@ -15,12 +17,8 @@ function FilterSize() {
     "45",
   ];
   return (
-    <div className={styles.filterSize}>
-      <div className={styles.header}>
-        <span>Size</span>
-        <i className="bx bxs-down-arrow"></i>
-      </div>
-      <div className={styles.bodySize}>
+    <Filter classOut={"filterSize"} headerTitle="Size">
+      <div className={joinClasses(styles.bodySize, styles.body)}>
         {size.map((size) => {
           return (
             <button key={size} className={styles.checkBoxSize}>
@@ -29,7 +27,7 @@ function FilterSize() {
           );
         })}
       </div>
-    </div>
+    </Filter>
   );
 }
 

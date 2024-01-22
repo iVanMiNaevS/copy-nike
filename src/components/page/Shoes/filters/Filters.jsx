@@ -1,9 +1,15 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import DefaultFilter from "./DefaultFilter";
 import FilterColor from "./FilterColor";
 import styles from "./filters.module.css";
 import FilterSize from "./FilterSize";
-function Filters() {
+import { useDispatch } from "react-redux";
+import { filterGender } from "../../../../store/slices/shoesSlice";
+import { joinClasses } from "../../../../utils/joinClasses";
+import { useRef } from "react";
+
+function Filters({ hideFilters }) {
   const filters = [
     { title: "Gender", property: ["Men", "Women", "Unisex"], id: 1 },
     {
@@ -19,7 +25,13 @@ function Filters() {
   ];
 
   return (
-    <div className={styles.filters}>
+    <div
+      className={
+        hideFilters
+          ? joinClasses(styles.filters, styles.hideFilters) //не сделал анимацию
+          : styles.filters
+      }
+    >
       {filters.map((filter) => {
         return <DefaultFilter key={filter.id} filter={filter} />;
       })}

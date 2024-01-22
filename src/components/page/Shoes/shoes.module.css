@@ -3,6 +3,11 @@
   height: fit-content;
   display: grid;
   grid-template-columns: 200px 1fr;
-  grid-template-rows: 130px 1fr;
+  grid-template-rows: 100px 1fr;
   column-gap: 70px;
+  transition: 0.5s;
+}
+.wrapperShoesPage.hideFilters {
+  grid-template-columns: 0px 1fr;
+  column-gap: 0;
 }

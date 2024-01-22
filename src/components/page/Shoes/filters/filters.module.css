@@ -1,22 +1,43 @@
 .filters {
-  max-height: 1400px;
+  max-height: 1000px;
   overflow-y: auto;
 }
 .defaultFilter span {
   @apply hover:text-gray-400;
 }
 .defaultFilter {
-  @apply py-4 text-xl font-medium;
+  @apply max-h-full py-4 text-xl font-medium;
   border-top: 2px solid rgba(0, 0, 0, 0.309);
+}
+/* .filters.hideFilters {
+  @apply  -translate-x-96; для анимации
+  transition: 1.5s;
+} */
+.defaultBody {
+  @apply flex flex-col gap-1 mt-4 overflow-hidden;
+}
+.filter.open .body {
+  @apply max-h-32;
+}
+.filter.open .bodySize.body {
+  @apply max-h-64;
+}
+.filter.open .bodyColor.body {
+  @apply max-h-64;
+  transition: 0.3s;
+}
+.body {
+  @apply flex flex-col gap-1 mt-4 overflow-hidden max-h-0;
+  transition: 0.3s;
 }
 .header {
   @apply flex items-center justify-between cursor-pointer;
 }
 
-.body {
-  @apply flex flex-col gap-1 mt-4 overflow-hidden;
+.open {
+  @apply max-h-full;
 }
-.body button {
+.defaultBody button {
   @apply flex items-center gap-4;
 }
 .checkBox {

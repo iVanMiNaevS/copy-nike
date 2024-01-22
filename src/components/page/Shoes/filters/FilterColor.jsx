@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./filters.module.css";
 import { joinClasses } from "../../../../utils/joinClasses";
+import Filter from "./helpersComp/Filter";
 function FilterColor() {
   const colors = [
     { color: "black" },
@@ -16,12 +17,8 @@ function FilterColor() {
     { color: "brown" },
   ];
   return (
-    <div className={styles.filterColor}>
-      <div className={styles.header}>
-        <span>Colors</span>
-        <i className="bx bxs-down-arrow"></i>
-      </div>
-      <div className={styles.bodyColor}>
+    <Filter classOut={"filterColor"} headerTitle="Colors">
+      <div className={joinClasses(styles.bodyColor, styles.body)}>
         {colors.map((color) => {
           return (
             <button key={color.color}>
@@ -38,7 +35,7 @@ function FilterColor() {
           <div className={styles.nameColor}>Multi - color</div>
         </button>
       </div>
-    </div>
+    </Filter>
   );
 }
 

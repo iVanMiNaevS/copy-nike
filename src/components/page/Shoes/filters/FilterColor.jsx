@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./filters.module.css";
 import { joinClasses } from "../../../../utils/joinClasses";
 import Filter from "./helpersComp/Filter";
+import { useState } from "react";
+import CheckBoxColor from "./helpersComp/CheckBoxColor";
 function FilterColor() {
   const colors = [
     { color: "black" },
@@ -16,23 +18,28 @@ function FilterColor() {
     { color: "blue" },
     { color: "brown" },
   ];
+  const [toggleMC, setToggleMC] = useState(false);
   return (
     <Filter classOut={"filterColor"} headerTitle="Colors">
       <div className={joinClasses(styles.bodyColor, styles.body)}>
         {colors.map((color) => {
-          return (
-            <button key={color.color}>
-              <div
-                className={styles.color}
-                style={{ backgroundColor: color.color }}
-              ></div>
-              <div className={styles.nameColor}>{color.color}</div>
-            </button>
-          );
+          return <CheckBoxColor color={color} />;
         })}
-        <button>
-          <div className={joinClasses(styles.color, styles.MultiColor)}></div>
-          <div className={styles.nameColor}>Multi - color</div>
+        <button
+          onClick={() => {
+            setToggleMC(!toggleMC);
+          }}
+        >
+          <div
+            className={
+              toggleMC
+                ? joinClasses(styles.color, styles.MultiColor, styles.toggle)
+                : joinClasses(styles.color, styles.MultiColor)
+            }
+          >
+            ✓
+          </div>
+          <div className={styles.nameColor}>Multi-color</div>
         </button>
       </div>
     </Filter>

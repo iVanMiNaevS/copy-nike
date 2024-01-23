@@ -1,7 +1,43 @@
-.filters {
-  max-height: 1000px;
+.wrapper {
+  height: calc(100vh - 164px);
+  position: sticky;
   overflow-y: auto;
+  overflow-x: hidden;
+  top: 100px;
+  transform: translateX(0);
+  transition: 0.5s;
+  width: 200px;
 }
+.wrapper.hideFilters {
+  transform: translateX(calc(-1 * (100% + 120px)));
+}
+.filters {
+  /* height: calc(100vh - 164px);
+  position: sticky;
+  overflow-y: auto;
+  top: 100px; */
+}
+.wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+.wrapper::-webkit-scrollbar-track {
+  background: transparent; /* цвет дорожки */
+}
+.wrapper::-webkit-scrollbar-thumb {
+  @apply bg-darkColor; /* цвет плашки */
+  border-radius: 20px; /* закругления плашки */
+  border: 0px solid; /* padding вокруг плашки */
+}
+.checkBox.toggle {
+  @apply text-white bg-black border-black;
+}
+.checkBoxSize.toggle {
+  @apply text-white bg-black border-black;
+}
+.color.toggle {
+  @apply text-white;
+}
+
 .defaultFilter span {
   @apply hover:text-gray-400;
 }
@@ -9,10 +45,7 @@
   @apply max-h-full py-4 text-xl font-medium;
   border-top: 2px solid rgba(0, 0, 0, 0.309);
 }
-/* .filters.hideFilters {
-  @apply  -translate-x-96; для анимации
-  transition: 1.5s;
-} */
+
 .defaultBody {
   @apply flex flex-col gap-1 mt-4 overflow-hidden;
 }
@@ -23,7 +56,7 @@
   @apply max-h-64;
 }
 .filter.open .bodyColor.body {
-  @apply max-h-64;
+  @apply max-h-96;
   transition: 0.3s;
 }
 .body {
@@ -41,7 +74,8 @@
   @apply flex items-center gap-4;
 }
 .checkBox {
-  @apply w-6 h-6 border-2 border-gray-300 rounded-md;
+  @apply flex items-center justify-center w-6 h-6 text-transparent border-2 border-gray-300 rounded-md;
+  transition: 0.3s;
 }
 .filterSize {
   @apply py-4 text-xl font-medium;
@@ -66,17 +100,18 @@
   @apply mt-4;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 1fr;
+  grid-auto-rows: 90px;
 }
 .bodyColor button {
   @apply flex flex-col items-center gap-1 hover:text-gray-400;
 }
 .color {
-  @apply rounded-full w-7 h-7;
+  @apply text-transparent rounded-full w-7 h-7;
   border: 1px solid rgba(128, 128, 128, 0.196);
 }
 .nameColor {
   @apply text-center;
+  overflow-wrap: break-word;
 }
 .MultiColor {
   background-image: url(../../../../img/multiColorBg2.jpg);

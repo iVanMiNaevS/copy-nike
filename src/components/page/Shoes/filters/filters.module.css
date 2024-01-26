@@ -37,6 +37,9 @@
 .color.toggle {
   @apply text-white;
 }
+.color.toggleWhite {
+  @apply text-black;
+}
 
 .defaultFilter span {
   @apply hover:text-gray-400;

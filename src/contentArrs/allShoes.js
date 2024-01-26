@@ -26,7 +26,7 @@ export const shoes = [
     gender: "Unisex",
     sizes: [38, 41, 42, 45],
     colors: ["white", "black"],
-    price: 95.99,
+    price: 40.99,
   },
   {
     id: 3,

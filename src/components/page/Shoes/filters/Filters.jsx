@@ -9,16 +9,16 @@ import { joinClasses } from "../../../../utils/joinClasses";
 
 function Filters({ hideFilters }) {
   const filters = [
-    { title: "Gender", property: ["Men", "Women", "Unisex"], id: 1 },
+    { title: "Gender", property: ["Men", "Women", "Unisex"], id: "gender" },
     {
       title: "Shop By Price",
       property: ["$0 - $50", "$50 - $100", "$100 - $150", "$150+"],
-      id: 2,
+      id: "price",
     },
     {
       title: "Shoe Height",
       property: ["Low Top", "Mid Top", "High Top"],
-      id: 3,
+      id: "height",
     },
   ];
 

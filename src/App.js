@@ -11,6 +11,7 @@ function ScrollToTop() {
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
+    document.body.style.overflowX = "hidden";
   }, [pathname]);
 
   return null;

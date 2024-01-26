@@ -10,12 +10,24 @@ function CheckBoxColor({ color }) {
         setToggle(!toggle);
       }}
     >
-      <div
-        className={toggle ? `${styles.color} ${styles.toggle}` : styles.color}
-        style={{ backgroundColor: color.color }}
-      >
-        ✓
-      </div>
+      {color.color === "white" ? (
+        <div
+          className={
+            toggle ? `${styles.color} ${styles.toggleWhite}` : styles.color
+          }
+          style={{ backgroundColor: color.color }}
+        >
+          ✓
+        </div>
+      ) : (
+        <div
+          className={toggle ? `${styles.color} ${styles.toggle}` : styles.color}
+          style={{ backgroundColor: color.color }}
+        >
+          ✓
+        </div>
+      )}
+
       <div className={styles.nameColor}>{color.color}</div>
     </button>
   );

@@ -23,7 +23,7 @@ function FilterColor() {
     <Filter classOut={"filterColor"} headerTitle="Colors">
       <div className={joinClasses(styles.bodyColor, styles.body)}>
         {colors.map((color) => {
-          return <CheckBoxColor color={color} />;
+          return <CheckBoxColor key={color.color} color={color} />;
         })}
         <button
           onClick={() => {

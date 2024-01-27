@@ -4,6 +4,8 @@ import { joinClasses } from "../../../../utils/joinClasses";
 import Filter from "./helpersComp/Filter";
 import { useState } from "react";
 import CheckBoxColor from "./helpersComp/CheckBoxColor";
+import { useDispatch } from "react-redux";
+import { addFilter, switchFilter } from "../../../../store/slices/shoesSlice";
 function FilterColor() {
   const colors = [
     { color: "black" },
@@ -18,6 +20,8 @@ function FilterColor() {
     { color: "blue" },
     { color: "brown" },
   ];
+  const dispatch = useDispatch();
+
   const [toggleMC, setToggleMC] = useState(false);
   return (
     <Filter classOut={"filterColor"} headerTitle="Colors">
@@ -27,6 +31,8 @@ function FilterColor() {
         })}
         <button
           onClick={() => {
+            dispatch(addFilter({ id: "colors", value: "multi" }));
+            dispatch(switchFilter({ id: "colors" }));
             setToggleMC(!toggleMC);
           }}
         >

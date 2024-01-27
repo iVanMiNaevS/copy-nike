@@ -3,31 +3,25 @@ import styles from "../filters.module.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {
-  filterGender,
-  filterHeight,
-  filterPrice,
-  joinALLFiltersArr,
+  addFilter,
+  switchFilter,
 } from "../../../../../store/slices/shoesSlice";
 
-function DefaultCheckBox({ prop, title }) {
+function DefaultCheckBox({ prop, id }) {
   const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
 
-  const [filtersActive, setFiltersActive] = useState({
-    gender: ["Men", "Women"],
-    height: ["Low"],
-    // price: ["$0 - $50", "$100 - $150"],
-  });
+  // const [filtersActive, setFiltersActive] = useState({
+  //   gender: ["Men", "Women"],
+  //   height: ["Low"],
+  //   // price: ["$0 - $50", "$100 - $150"],
+  // });
   return (
     <button
-      key={prop}
+      key={prop.str}
       onClick={() => {
-        // создать отдельно функцию которая по заголовку выбирает какой  фильтр добавить и какую функцию вызвать  и тогда не нужно много
-        // диспач импортировать. Так же filtersActive можно вынести в redux
-        dispatch(filterGender(filtersActive.gender));
-        dispatch(filterHeight(filtersActive.height));
-        // dispatch(filterPrice(filtersActive.price));
-        dispatch(joinALLFiltersArr());
+        dispatch(addFilter({ id, value: prop.id }));
+        dispatch(switchFilter({ id }));
         setToggle(!toggle);
       }}
     >
@@ -38,7 +32,7 @@ function DefaultCheckBox({ prop, title }) {
       >
         ✓
       </div>
-      <span>{prop}</span>
+      <span>{prop.str}</span>
     </button>
   );
 }

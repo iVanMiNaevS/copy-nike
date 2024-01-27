@@ -9,15 +9,32 @@ import { joinClasses } from "../../../../utils/joinClasses";
 
 function Filters({ hideFilters }) {
   const filters = [
-    { title: "Gender", property: ["Men", "Women", "Unisex"], id: "gender" },
+    {
+      title: "Gender",
+      property: [
+        { str: "Men", id: "Men" },
+        { str: "Women", id: "Women" },
+        { str: "Unisex", id: "Unisex" },
+      ],
+      id: "gender",
+    },
     {
       title: "Shop By Price",
-      property: ["$0 - $50", "$50 - $100", "$100 - $150", "$150+"],
+      property: [
+        { str: "$0 - $50", id: [0, 50] },
+        { str: "$50 - $100", id: [50, 100] },
+        { str: "$100 - $150", id: [100, 150] },
+        { str: "$150+", id: [150, 100000] },
+      ],
       id: "price",
     },
     {
       title: "Shoe Height",
-      property: ["Low Top", "Mid Top", "High Top"],
+      property: [
+        { str: "Low Top", id: "Low" },
+        { str: "Mid Top", id: "Mid" },
+        { str: "High Top", id: "High" },
+      ],
       id: "height",
     },
   ];

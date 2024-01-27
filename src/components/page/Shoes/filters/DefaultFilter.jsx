@@ -11,9 +11,7 @@ function DefaultFilter({ filter }) {
     <Filter classOut={"defaultFilter"} headerTitle={filter.title}>
       <div className={joinClasses(styles.defaultBody, styles.body)}>
         {filter.property.map((prop) => {
-          return (
-            <DefaultCheckBox key={prop} prop={prop} title={filter.title} />
-          );
+          return <DefaultCheckBox key={prop.str} prop={prop} id={filter.id} />;
         })}
       </div>
     </Filter>

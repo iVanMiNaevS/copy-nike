@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import {
   addFilter,
   switchFilter,
+  deleteFilter,
 } from "../../../../../store/slices/shoesSlice";
 
 function CheckBoxColor({ color }) {
@@ -14,8 +15,15 @@ function CheckBoxColor({ color }) {
     <button
       key={color.color}
       onClick={() => {
-        dispatch(addFilter({ id: "colors", value: color.color }));
-        dispatch(switchFilter({ id: "colors" }));
+        if (toggle) {
+          dispatch(deleteFilter({ id: "colors", value: color.color }));
+          dispatch(switchFilter({ id: "colors" }));
+        } else {
+          console.log(toggle);
+          dispatch(addFilter({ id: "colors", value: color.color }));
+          dispatch(switchFilter({ id: "colors" }));
+        }
+
         setToggle(!toggle);
       }}
     >

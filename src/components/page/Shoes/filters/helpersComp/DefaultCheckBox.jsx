@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {
   addFilter,
+  deleteFilter,
   switchFilter,
 } from "../../../../../store/slices/shoesSlice";
 
@@ -20,8 +21,14 @@ function DefaultCheckBox({ prop, id }) {
     <button
       key={prop.str}
       onClick={() => {
-        dispatch(addFilter({ id, value: prop.id }));
-        dispatch(switchFilter({ id }));
+        if (toggle) {
+          dispatch(deleteFilter({ id, value: prop.id }));
+          dispatch(switchFilter({ id }));
+        } else {
+          console.log(toggle);
+          dispatch(addFilter({ id, value: prop.id }));
+          dispatch(switchFilter({ id }));
+        }
         setToggle(!toggle);
       }}
     >

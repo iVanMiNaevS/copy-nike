@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import {
   addFilter,
   switchFilter,
+  deleteFilter,
 } from "../../../../../store/slices/shoesSlice";
 import styles from "../filters.module.css";
 function CheckBoxSize({ size }) {
@@ -16,8 +17,14 @@ function CheckBoxSize({ size }) {
         toggle ? `${styles.checkBoxSize} ${styles.toggle}` : styles.checkBoxSize
       }
       onClick={() => {
-        dispatch(addFilter({ id: "sizes", value: Number(size) }));
-        dispatch(switchFilter({ id: "sizes" }));
+        if (toggle) {
+          dispatch(deleteFilter({ id: "sizes", value: Number(size) }));
+          dispatch(switchFilter({ id: "sizes" }));
+        } else {
+          console.log(toggle);
+          dispatch(addFilter({ id: "sizes", value: Number(size) }));
+          dispatch(switchFilter({ id: "sizes" }));
+        }
 
         setToggle(!toggle);
       }}

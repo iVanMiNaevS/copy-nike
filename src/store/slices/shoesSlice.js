@@ -1,6 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { shoes } from "../../contentArrs/allShoes";
 import { UseDispatch } from "react-redux";
+function templateFilter(state, filterActive, arr, callback) {
+  if (filterActive.length !== 0) {
+    state.addArrs = {
+      ...state.addArrs,
+      [arr]: [],
+    };
+    callback(state, filterActive, arr);
+  } else {
+    delete state.addArrs[arr];
+  }
+}
 export const shoesSlice = createSlice({
   // должно быть 3
   name: "shoes",
@@ -56,25 +67,26 @@ export const shoesSlice = createSlice({
         haveMatched = false;
       }
     },
-
+    deleteFilter(state, action) {
+      const index = state.filtersActive[action.payload.id].indexOf(
+        action.payload.value
+      );
+      state.filtersActive[action.payload.id].splice(index, 1);
+    },
     addFilter(state, action) {
-      if (
-        state.filtersActive[action.payload.id].indexOf(action.payload.value) ===
-        -1
-      ) {
-        state.filtersActive[action.payload.id].push(action.payload.value);
-      }
+      state.filtersActive[action.payload.id].push(action.payload.value);
     },
     joinALLFiltersArr(state) {
       const res = [];
       let arrOfArr = []; /// массив массивов
-      for (let key in state.addArrs) {
-        arrOfArr.push(...state.addArrs[key]);
-      }
-
-      if (Object.keys(state.addArrs).length === 1) {
+      if (Object.keys(state.addArrs).length === 0) {
+        state.shoes = state.mainShoes;
+      } else if (Object.keys(state.addArrs).length === 1) {
         state.shoes = state.addArrs[Object.keys(state.addArrs)[0]];
       } else {
+        for (let key in state.addArrs) {
+          arrOfArr.push(...state.addArrs[key]);
+        }
         const repetitions = Object.keys(state.addArrs).length;
 
         arrOfArr.forEach((el) => {
@@ -101,93 +113,114 @@ export const shoesSlice = createSlice({
     },
 
     filterGender(state, action) {
-      state.addArrs = {
-        ...state.addArrs,
-        ArrGender: [],
-      };
-
-      const filtersActive = action.payload;
-      filtersActive.forEach((el) => {
-        state.mainShoes.forEach((shoes) => {
-          if (el === shoes.gender) {
-            state.addArrs.ArrGender.push(shoes);
-          }
-        });
-      });
+      templateFilter(
+        state,
+        action.payload,
+        "arrGender",
+        (state, filterActive, arr) => {
+          filterActive.forEach((el) => {
+            state.mainShoes.forEach((shoes) => {
+              if (el === shoes.gender) {
+                state.addArrs[arr].push(shoes);
+              }
+            });
+          });
+        }
+      );
     },
     filterHeight(state, action) {
-      const filtersActive = action.payload;
-      state.addArrs = { ...state.addArrs, ArrHeight: [] };
-      filtersActive.forEach((el) => {
-        state.mainShoes.forEach((shoes) => {
-          if (el === shoes.height) {
-            state.addArrs.ArrHeight.push(shoes);
-          }
-        });
-      });
+      templateFilter(
+        state,
+        action.payload,
+        "arrHeight",
+        (state, filterActive, arr) => {
+          filterActive.forEach((el) => {
+            state.mainShoes.forEach((shoes) => {
+              if (el === shoes.height) {
+                state.addArrs[arr].push(shoes);
+              }
+            });
+          });
+        }
+      );
     },
     filterPrice(state, action) {
-      const filterActive = action.payload;
-      state.addArrs = { ...state.addArrs, ArrPrice: [] };
-      state.mainShoes.forEach((shoes) => {
-        filterActive.forEach((item) => {
-          if (
-            Number(item[0]) <= shoes.price &&
-            Number(item[1]) >= shoes.price
-          ) {
-            state.addArrs.ArrPrice.push(shoes);
-          }
-        });
-      });
+      templateFilter(
+        state,
+        action.payload,
+        "arrPrice",
+        (state, filterActive, arr) => {
+          state.mainShoes.forEach((shoes) => {
+            filterActive.forEach((item) => {
+              if (
+                Number(item[0]) <= shoes.price &&
+                Number(item[1]) >= shoes.price
+              ) {
+                state.addArrs[arr].push(shoes);
+              }
+            });
+          });
+        }
+      );
     },
     filterSize(state, action) {
-      const filterActive = action.payload;
-      state.addArrs = { ...state.addArrs, ArrSize: [] };
-      state.mainShoes.forEach((shoes) => {
-        shoes.sizes.forEach((size) => {
-          filterActive.forEach((sizeOfFilter) => {
-            if (size === sizeOfFilter && state.addArrs.ArrSize.length === 0) {
-              state.addArrs.ArrSize.push(shoes);
-            } else if (size === sizeOfFilter) {
-              let count = 0;
-              state.addArrs.ArrSize.forEach((obj) => {
-                if (obj.id === shoes.id) {
-                  count++;
+      templateFilter(
+        state,
+        action.payload,
+        "arrSize",
+        (state, filterActive, arr) => {
+          state.mainShoes.forEach((shoes) => {
+            shoes.sizes.forEach((size) => {
+              filterActive.forEach((sizeOfFilter) => {
+                if (size === sizeOfFilter && state.addArrs[arr].length === 0) {
+                  state.addArrs[arr].push(shoes);
+                } else if (size === sizeOfFilter) {
+                  let count = 0;
+                  state.addArrs[arr].forEach((obj) => {
+                    if (obj.id === shoes.id) {
+                      count++;
+                    }
+                  });
+                  if (count === 0) {
+                    state.addArrs[arr].push(shoes);
+                  }
                 }
               });
-              if (count === 0) {
-                state.addArrs.ArrSize.push(shoes);
-              }
-            }
+            });
           });
-        });
-      });
+        }
+      );
     },
     filterColor(state, action) {
-      const filterActive = action.payload;
-      state.addArrs = { ...state.addArrs, ArrColor: [] };
-      state.mainShoes.forEach((shoes) => {
-        shoes.colors.forEach((color) => {
-          filterActive.forEach((colorOfFilter) => {
-            if (
-              color === colorOfFilter &&
-              state.addArrs.ArrColor.length === 0
-            ) {
-              state.addArrs.ArrColor.push(shoes);
-            } else if (color === colorOfFilter) {
-              let count = 0;
-              state.addArrs.ArrColor.forEach((obj) => {
-                if (obj.id === shoes.id) {
-                  count++;
+      templateFilter(
+        state,
+        action.payload,
+        "arrColor",
+        (state, filterActive, arr) => {
+          state.mainShoes.forEach((shoes) => {
+            shoes.colors.forEach((color) => {
+              filterActive.forEach((colorOfFilter) => {
+                if (
+                  color === colorOfFilter &&
+                  state.addArrs[arr].length === 0
+                ) {
+                  state.addArrs[arr].push(shoes);
+                } else if (color === colorOfFilter) {
+                  let count = 0;
+                  state.addArrs[arr].forEach((obj) => {
+                    if (obj.id === shoes.id) {
+                      count++;
+                    }
+                  });
+                  if (count === 0) {
+                    state.addArrs[arr].push(shoes);
+                  }
                 }
               });
-              if (count === 0) {
-                state.addArrs.ArrColor.push(shoes);
-              }
-            }
+            });
           });
-        });
-      });
+        }
+      );
     },
   },
 });
@@ -201,5 +234,6 @@ export const {
   filterColor,
   addFilter,
   switchFilter,
+  deleteFilter,
 } = shoesSlice.actions;
 export default shoesSlice.reducer;

@@ -5,7 +5,11 @@ import Filter from "./helpersComp/Filter";
 import { useState } from "react";
 import CheckBoxColor from "./helpersComp/CheckBoxColor";
 import { useDispatch } from "react-redux";
-import { addFilter, switchFilter } from "../../../../store/slices/shoesSlice";
+import {
+  addFilter,
+  switchFilter,
+  deleteFilter,
+} from "../../../../store/slices/shoesSlice";
 function FilterColor() {
   const colors = [
     { color: "black" },
@@ -31,8 +35,15 @@ function FilterColor() {
         })}
         <button
           onClick={() => {
-            dispatch(addFilter({ id: "colors", value: "multi" }));
-            dispatch(switchFilter({ id: "colors" }));
+            if (toggleMC) {
+              dispatch(deleteFilter({ id: "colors", value: "multi" }));
+              dispatch(switchFilter({ id: "colors" }));
+            } else {
+              console.log(toggleMC);
+              dispatch(addFilter({ id: "colors", value: "multi" }));
+              dispatch(switchFilter({ id: "colors" }));
+            }
+
             setToggleMC(!toggleMC);
           }}
         >

@@ -25,7 +25,6 @@ function DefaultCheckBox({ prop, id }) {
           dispatch(deleteFilter({ id, value: prop.id }));
           dispatch(switchFilter({ id }));
         } else {
-          console.log(toggle);
           dispatch(addFilter({ id, value: prop.id }));
           dispatch(switchFilter({ id }));
         }

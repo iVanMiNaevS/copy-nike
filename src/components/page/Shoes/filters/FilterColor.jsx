@@ -28,7 +28,7 @@ function FilterColor() {
 
   const [toggleMC, setToggleMC] = useState(false);
   return (
-    <Filter classOut={"filterColor"} headerTitle="Colors">
+    <Filter classOut={"filterColor"} headerTitle="Colors" whatFilter={"colors"}>
       <div className={joinClasses(styles.bodyColor, styles.body)}>
         {colors.map((color) => {
           return <CheckBoxColor key={color.color} color={color} />;

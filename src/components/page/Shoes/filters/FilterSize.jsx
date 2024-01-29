@@ -18,7 +18,7 @@ function FilterSize() {
     "45",
   ];
   return (
-    <Filter classOut={"filterSize"} headerTitle="Size">
+    <Filter classOut={"filterSize"} headerTitle="Size" whatFilter={"sizes"}>
       <div className={joinClasses(styles.bodySize, styles.body)}>
         {size.map((size) => {
           return <CheckBoxSize key={size} size={size} />;

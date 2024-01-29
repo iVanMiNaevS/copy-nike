@@ -8,7 +8,11 @@ import { joinClasses } from "../../../../utils/joinClasses";
 import DefaultCheckBox from "./helpersComp/DefaultCheckBox";
 function DefaultFilter({ filter }) {
   return (
-    <Filter classOut={"defaultFilter"} headerTitle={filter.title}>
+    <Filter
+      classOut={"defaultFilter"}
+      headerTitle={filter.title}
+      whatFilter={filter.id}
+    >
       <div className={joinClasses(styles.defaultBody, styles.body)}>
         {filter.property.map((prop) => {
           return <DefaultCheckBox key={prop.str} prop={prop} id={filter.id} />;

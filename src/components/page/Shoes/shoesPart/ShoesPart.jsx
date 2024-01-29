@@ -6,9 +6,13 @@ function ShoesPart() {
   const shoes = useSelector((store) => store.shoes.shoes);
   return (
     <div className={styles.shoesPart}>
-      {shoes.map((shoes) => {
-        return <ShoesItem key={shoes.id} shoes={shoes} />;
-      })}
+      {shoes.length === 0 ? (
+        <h1 className={styles.noSneakers}>"There are no such sneakers yet"</h1>
+      ) : (
+        shoes.map((shoes) => {
+          return <ShoesItem key={shoes.id} shoes={shoes} />;
+        })
+      )}
     </div>
   );
 }

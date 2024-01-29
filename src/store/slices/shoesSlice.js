@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { shoes } from "../../contentArrs/allShoes";
-import { UseDispatch } from "react-redux";
 function templateFilter(state, filterActive, arr, callback) {
   if (filterActive.length !== 0) {
     state.addArrs = {
@@ -20,6 +19,7 @@ export const shoesSlice = createSlice({
     shoes: shoes,
     addArrs: {},
     filtersActive: { gender: [], height: [], price: [], sizes: [], colors: [] },
+    sortBy: "",
   },
   reducers: {
     switchFilter(state, action) {
@@ -64,6 +64,7 @@ export const shoesSlice = createSlice({
       }
       if (haveMatched) {
         shoesSlice.caseReducers.joinALLFiltersArr(state);
+        shoesSlice.caseReducers.sort(state);
         haveMatched = false;
       }
     },
@@ -111,7 +112,32 @@ export const shoesSlice = createSlice({
         });
       }
     },
-
+    setSortBy(state, action) {
+      state.sortBy = action.payload;
+    },
+    sort(state) {
+      if (state.sortBy === "Low-High") {
+        state.shoes.sort((a, b) => {
+          if (a.price === b.price) {
+            return 0;
+          } else {
+            return a.price - b.price;
+          }
+        });
+      } else if (state.sortBy === "High-Low") {
+        state.shoes.sort((a, b) => {
+          if (a.price === b.price) {
+            return 0;
+          } else {
+            return b.price - a.price;
+          }
+        });
+      } else if (state.sortBy === "Newest") {
+        state.shoes.sort((a, b) => {
+          return new Date(b.date) - new Date(a.date);
+        });
+      }
+    },
     filterGender(state, action) {
       templateFilter(
         state,
@@ -235,5 +261,7 @@ export const {
   addFilter,
   switchFilter,
   deleteFilter,
+  sort,
+  setSortBy,
 } = shoesSlice.actions;
 export default shoesSlice.reducer;

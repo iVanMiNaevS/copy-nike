@@ -3,11 +3,11 @@ import DefaultFilter from "./DefaultFilter";
 import FilterColor from "./FilterColor";
 import styles from "./filters.module.css";
 import FilterSize from "./FilterSize";
-import { useDispatch } from "react-redux";
-import { filterGender } from "../../../../store/slices/shoesSlice";
-import { joinClasses } from "../../../../utils/joinClasses";
 
-function Filters({ hideFilters }) {
+import { joinClasses } from "../../../../utils/joinClasses";
+import MobSort from "./MobSort";
+
+function Filters({ hideFilters, setHideFilters }) {
   const filters = [
     {
       title: "Gender",
@@ -43,11 +43,28 @@ function Filters({ hideFilters }) {
     <div
       className={
         hideFilters
-          ? joinClasses(styles.wrapper, styles.hideFilters) //не сделал анимацию
+          ? joinClasses(styles.wrapper, styles.hideFilters)
           : styles.wrapper
       }
     >
       <div className={styles.filters}>
+        {filters.map((filter) => {
+          return <DefaultFilter key={filter.id} filter={filter} />;
+        })}
+        <FilterSize />
+        <FilterColor />
+      </div>
+
+      <div className={styles.MobFilters}>
+        <div className="w-full text-right mb-7">
+          <i
+            className="text-3xl bx bx-x "
+            onClick={() => {
+              setHideFilters(!hideFilters);
+            }}
+          ></i>
+        </div>
+        <MobSort />
         {filters.map((filter) => {
           return <DefaultFilter key={filter.id} filter={filter} />;
         })}

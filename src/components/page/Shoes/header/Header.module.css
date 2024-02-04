@@ -15,6 +15,13 @@
 .hideFilters {
   @apply flex items-center gap-4;
 }
+.MobHideFilters {
+  @apply flex items-center gap-4;
+  display: none;
+}
+.MobHideFilters img {
+  @apply w-8;
+}
 .hideFilters span {
 }
 .hideFilters img {
@@ -33,4 +40,28 @@
 }
 .dropDown li:hover {
   @apply text-gray-400 cursor-pointer;
+}
+@media (max-width: 1700px) {
+}
+@media (max-width: 1439px) {
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 992px) {
+  .sort {
+    display: none;
+  }
+  .MobHideFilters {
+    display: flex;
+  }
+  .hideFilters {
+    display: none;
+  }
+  .titlePage {
+    @apply text-2xl;
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
 }

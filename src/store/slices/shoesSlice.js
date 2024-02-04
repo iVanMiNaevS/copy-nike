@@ -68,6 +68,7 @@ export const shoesSlice = createSlice({
         haveMatched = false;
       }
     },
+
     deleteFilter(state, action) {
       const index = state.filtersActive[action.payload.id].indexOf(
         action.payload.value

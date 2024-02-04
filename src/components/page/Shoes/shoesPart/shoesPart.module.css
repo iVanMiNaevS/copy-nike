@@ -2,7 +2,6 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 35vw;
   gap: 40px;
 }
 .noSneakers {
@@ -10,12 +9,13 @@
 }
 
 .item {
+  @apply h-[500px];
 }
 .item img {
-  @apply object-cover w-full h-[25vw] bg-gray-300;
+  @apply object-cover w-full h-[65%] bg-gray-300;
 }
 .lowerPart {
-  @apply py-6 h-fit bg-darkColor;
+  @apply flex flex-col justify-between py-3  pr-2 bg-darkColor h-[35%];
 }
 .text {
   @apply pl-6;
@@ -27,5 +27,56 @@
   @apply text-lg text-gray-400;
 }
 .price {
-  @apply h-12 mt-6 text-xl font-medium bg-white border-r w-28 rounded-e-xl;
+  @apply text-xl font-medium bg-white border-r min-h-[48px] w-28 rounded-e-xl;
+}
+@media (max-width: 1700px) {
+}
+@media (max-width: 1439px) {
+  .shoesPart {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+  .shoesPart {
+    gap: 20px;
+  }
+  .item {
+    @apply h-[450px];
+  }
+  .item img {
+    @apply object-cover w-full h-[60%] bg-gray-300;
+  }
+  .lowerPart {
+    @apply flex flex-col justify-between py-3  pr-2 bg-darkColor h-[40%];
+  }
+}
+@media (max-width: 576px) {
+  .text {
+    @apply pl-2;
+  }
+  .shoesPart {
+    gap: 10px;
+  }
+  .item {
+    @apply h-[320px];
+  }
+  .item img {
+    @apply object-cover w-full h-[45%] bg-gray-300;
+  }
+  .lowerPart {
+    @apply flex flex-col justify-between py-3 pr-1 bg-darkColor h-[55%];
+  }
+  .title {
+    @apply mb-2 text-base font-medium text-white;
+  }
+  .countColor {
+    @apply text-base text-gray-400;
+  }
+  .price {
+    @apply text-base font-medium bg-white border-r min-h-[30px] w-20 rounded-e-xl;
+  }
 }

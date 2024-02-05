@@ -5,6 +5,7 @@ import { joinClasses } from "../../../../../utils/joinClasses";
 import styles from "../filters.module.css";
 function Filter({ children, classOut, headerTitle, whatFilter }) {
   const [open, setOpen] = useState(false);
+
   const countActiveFilters = useSelector(
     (store) => store.shoes.filtersActive[whatFilter].length
   );

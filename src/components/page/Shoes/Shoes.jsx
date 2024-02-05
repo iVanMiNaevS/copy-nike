@@ -25,7 +25,7 @@ function Shoes() {
   }, [width]);
   useEffect(() => {
     if (width <= 992) {
-      !hideFilters
+      hideFilters
         ? document.body.classList.add("no-scroll")
         : document.body.classList.remove("no-scroll");
     } else {

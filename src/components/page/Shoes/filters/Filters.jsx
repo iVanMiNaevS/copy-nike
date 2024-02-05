@@ -42,7 +42,7 @@ function Filters({ hideFilters, setHideFilters }) {
   return (
     <div
       className={
-        hideFilters
+        !hideFilters
           ? joinClasses(styles.wrapper, styles.hideFilters)
           : styles.wrapper
       }
@@ -56,7 +56,7 @@ function Filters({ hideFilters, setHideFilters }) {
       </div>
 
       <div className={styles.MobFilters}>
-        <div className="w-full text-right mb-7">
+        <div className="w-full mt-4 text-right mb-7">
           <i
             className="text-3xl bx bx-x "
             onClick={() => {

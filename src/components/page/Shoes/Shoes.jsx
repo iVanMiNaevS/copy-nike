@@ -6,10 +6,10 @@ import ShoesPart from "./shoesPart/ShoesPart";
 import { useState } from "react";
 import { joinClasses } from "../../../utils/joinClasses";
 import { useEffect } from "react";
-import Sort from "./header/Sort";
 function Shoes() {
   const [hideFilters, setHideFilters] = useState(false);
   const [width, setWidth] = useState(window.screen.width);
+
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWidth(window.screen.width);
@@ -17,6 +17,7 @@ function Shoes() {
     if (width <= 992) {
       document.body.style.overflowX = "hidden";
     } else {
+      // setMobScreen(false);
       document.body.style.overflowX = "visible";
     }
     return window.removeEventListener("resize", () => {
@@ -32,6 +33,29 @@ function Shoes() {
       document.body.classList.remove("no-scroll");
     }
   }, [hideFilters]);
+  if (width <= 992) {
+    return (
+      <div className={styles.shoesPage}>
+        <div className="wrapper">
+          <div
+            className={
+              hideFilters
+                ? joinClasses(styles.wrapperShoesPage, styles.hideFilters)
+                : styles.wrapperShoesPage
+            }
+          >
+            <Header setHideFilters={setHideFilters} />
+            <Filters
+              hideFilters={hideFilters}
+              setHideFilters={setHideFilters}
+              mobScreen={true}
+            />
+            <ShoesPart />
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className={styles.shoesPage}>
       <div className="wrapper">
@@ -43,7 +67,11 @@ function Shoes() {
           }
         >
           <Header setHideFilters={setHideFilters} />
-          <Filters hideFilters={hideFilters} setHideFilters={setHideFilters} />
+          <Filters
+            hideFilters={hideFilters}
+            setHideFilters={setHideFilters}
+            mobScreen={false}
+          />
           <ShoesPart />
         </div>
       </div>

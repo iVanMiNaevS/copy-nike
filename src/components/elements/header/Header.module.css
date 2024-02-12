@@ -1,5 +1,5 @@
 header {
-  @apply bg-lightGreen w-full z-20 relative;
+  @apply relative z-20 w-full bg-lightGreen;
 }
 header .wrapper {
   @apply z-20;
@@ -8,7 +8,7 @@ header .wrapper {
   @apply flex justify-between;
 }
 .icon {
-  @apply w-80 h-16;
+  @apply h-16 w-80;
 }
 .ul li {
   border-bottom-width: 4px;
@@ -20,15 +20,15 @@ header .wrapper {
 }
 
 .ul li:hover {
-  @apply border-darkColor border-b-4 border-solid;
+  @apply border-b-4 border-solid border-darkColor;
 }
 .nav {
-  @apply text-xl h-16;
+  @apply h-16 text-xl;
   font-weight: 600;
 }
 
 .ul {
-  @apply flex items-center gap-6 h-full;
+  @apply flex items-center h-full gap-6;
   padding-top: 4px;
 }
 .link0 {
@@ -41,11 +41,11 @@ header .wrapper {
 }
 
 .rightPart {
-  @apply w-80 h-16 flex gap-3 justify-end items-center;
+  @apply flex items-center justify-end h-16 gap-3 w-80;
 }
 
 .search1 {
-  @apply rounded-2xl pl-10 border-none h-7;
+  @apply pl-10 border-none rounded-2xl h-7;
   outline: none;
   background-image: url("../../../img/search-regular-24.png");
   background-size: 24px;
@@ -53,11 +53,11 @@ header .wrapper {
   background-repeat: no-repeat;
 }
 .mobRightPart {
-  @apply flex w-56 justify-between items-center;
+  @apply flex items-center justify-between w-56;
   display: none;
 }
 .burger {
-  @apply w-8 h-6 flex flex-col justify-between cursor-pointer;
+  @apply flex flex-col justify-between w-8 h-6 cursor-pointer;
 }
 .row {
   @apply w-full bg-darkColor;
@@ -70,7 +70,7 @@ header .wrapper {
     width: 170px;
   }
   .ul {
-    @apply flex items-center gap-5 h-full;
+    @apply flex items-center h-full gap-5;
     padding-top: 4px;
   }
 }
@@ -82,7 +82,7 @@ header .wrapper {
     width: 170px;
   }
   .rightPart {
-    @apply w-80 h-16 flex gap-3 justify-end items-center;
+    @apply flex items-center justify-end h-16 gap-3 w-80;
   }
 }
 @media (max-width: 992px) {

@@ -7,7 +7,7 @@ import FilterSize from "./FilterSize";
 import { joinClasses } from "../../../../utils/joinClasses";
 import MobSort from "./MobSort";
 
-function Filters({ hideFilters, setHideFilters }) {
+function Filters({ hideFilters, setHideFilters, mobScreen }) {
   const filters = [
     {
       title: "Gender",
@@ -42,7 +42,11 @@ function Filters({ hideFilters, setHideFilters }) {
   return (
     <div
       className={
-        !hideFilters
+        mobScreen
+          ? !hideFilters
+            ? joinClasses(styles.wrapper, styles.hideFilters)
+            : styles.wrapper
+          : hideFilters
           ? joinClasses(styles.wrapper, styles.hideFilters)
           : styles.wrapper
       }

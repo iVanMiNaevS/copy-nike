@@ -6,6 +6,7 @@ import HollPage from "./components/page/HollPage/HollPage";
 import Layout from "./components/Layout";
 import NWC from "./components/page/NWC/NWC";
 import NikeApp from "./components/page/NikeApp/NikeApp";
+import CardProduct from "./components/page/CardProduct/CardProduct";
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -23,8 +24,9 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<HollPage />} />
+          <Route index element={<HollPage />} />
           <Route path="shoes" element={<Shoes />} />
+          <Route path="shoes/:id" element={<CardProduct />} />
           <Route path="about" element={<About />} />
           <Route path="NikeAPP" element={<NikeApp />} />
           <Route path="NWC" element={<NWC />} />

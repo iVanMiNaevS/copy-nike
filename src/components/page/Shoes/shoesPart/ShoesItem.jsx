@@ -1,8 +1,16 @@
 import React from "react";
 import styles from "./shoesPart.module.css";
+import { useNavigate } from "react-router-dom";
 function ShoesItem({ shoes }) {
+  const navigate = useNavigate();
   return (
-    <div className={styles.item} data-id={shoes.id}>
+    <div
+      className={styles.item}
+      data-id={shoes.id}
+      onClick={() => {
+        navigate(`${shoes.id}`);
+      }}
+    >
       <img src={shoes.img} alt={"img"}></img>
       <div className={styles.lowerPart}>
         <div className={styles.text}>

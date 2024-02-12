@@ -9,7 +9,7 @@
 }
 
 .item {
-  @apply h-[500px];
+  @apply h-[500px] hover:cursor-pointer;
 }
 .item img {
   @apply object-cover w-full h-[65%] bg-gray-300;

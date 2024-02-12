@@ -16,50 +16,59 @@ function Header() {
       ? document.body.classList.add("no-scroll")
       : document.body.classList.remove("no-scroll");
   }, [openMobMenu]);
+  let scrollTop = 0;
+  window.addEventListener("scroll", () => {
+    scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    console.log(scrollTop);
+  });
+
   return (
     <>
-      <header>
-        <div className="wrapper">
-          <div className={styles.headerPart}>
-            <div className={styles.icon}>
-              <img
-                src={require("../../../img/holl-page/jordan-icon.png")}
-                alt="men"
-                width={"60px"}
-              />
-            </div>
-            <Navigation
-              setDLCont={setDropListContent}
-              setDLIsOpen={setDropListIsOpen}
-            />
-            <div className={styles.rightPart}>
-              <input placeholder="Search" className={styles.search1} />
-              <i className="bx bx-shopping-bag text-3xl"></i>
-              <i className="bx bx-user text-3xl"></i>
-            </div>
-            <div className={styles.mobRightPart}>
-              <i className="bx bx-search text-3xl"></i>
-              <i className="bx bx-shopping-bag text-3xl"></i>
-              <i className="bx bx-user text-3xl"></i>
-              <div
-                className={styles.burger}
-                onClick={() => setOpenMobMenu(true)}
-              >
-                <div className={styles.row}></div>
-                <div className={styles.row}></div>
-                <div className={styles.row}></div>
+      <div className="fixed z-50 w-full">
+        <header>
+          <div className="wrapper">
+            <div className={styles.headerPart}>
+              <div className={styles.icon}>
+                <img
+                  src={require("../../../img/holl-page/jordan-icon.png")}
+                  alt="men"
+                  width={"60px"}
+                />
               </div>
-              <MMWrapper toggleMenu={setOpenMobMenu} open={openMobMenu} />
+              <Navigation
+                setDLCont={setDropListContent}
+                setDLIsOpen={setDropListIsOpen}
+              />
+              <div className={styles.rightPart}>
+                <input placeholder="Search" className={styles.search1} />
+                <i className="text-3xl bx bx-shopping-bag"></i>
+                <i className="text-3xl bx bx-user"></i>
+              </div>
+              <div className={styles.mobRightPart}>
+                <i className="text-3xl bx bx-search"></i>
+                <i className="text-3xl bx bx-shopping-bag"></i>
+                <i className="text-3xl bx bx-user"></i>
+                <div
+                  className={styles.burger}
+                  onClick={() => setOpenMobMenu(true)}
+                >
+                  <div className={styles.row}></div>
+                  <div className={styles.row}></div>
+                  <div className={styles.row}></div>
+                </div>
+                <MMWrapper toggleMenu={setOpenMobMenu} open={openMobMenu} />
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <DropList
-        dropListIsOpen={dropListIsOpen}
-        setDropListIsOpen={setDropListIsOpen}
-        content={dropListContent}
-      />
+        <DropList
+          dropListIsOpen={dropListIsOpen}
+          setDropListIsOpen={setDropListIsOpen}
+          content={dropListContent}
+        />
+      </div>
+      <div className="h-[64px]"></div>
     </>
   );
 }

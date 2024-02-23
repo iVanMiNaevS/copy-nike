@@ -1,12 +1,4 @@
-import AirForse1 from "../img/shoes/airForse1/air-force-1-07.png";
-import CourtVision from "../img/shoes/courtVision/court-vision-mid-next-nature-shoes-HFkwn1.png";
-import Blazer from "../img/shoes/Blazer/blazer-mid-77-vintage-shoes-3x983t.png";
-import jordanZoom from "../img/shoes/JordanZoom/air-jordan-1-zoom-air-cmft-2-shoes-b35MTM.png";
-import jordanZoom2 from "../img/shoes/JordanZoom/air-jordan-1-zoom-cmft-2-shoes-2W3NJM.png";
-import v2k from "../img/shoes/V2K/v2k-run-shoes-4CJ5WW.png";
-import jordanLowG from "../img/shoes/JordanLowG/air-jordan-1-low-g-golf-shoes-0P1HcH.png";
-import jordanLowSE from "../img/shoes/JordanLowSE/air-jordan-1-low-se-shoes-Z8CHrq.png";
-import AirForseByYou from "../img/shoes/ForseByYou/custom-nike-air-force-1-high-by-you-shoes.jpg";
+import { imgsShoes } from "./imgs";
 function randomDate(start, end, startHour, endHour) {
   var date = new Date(+start + Math.random() * (end - start));
   var hour = (startHour + Math.random() * (endHour - startHour)) | 0;
@@ -16,7 +8,8 @@ function randomDate(start, end, startHour, endHour) {
 export const shoes = [
   {
     id: 1,
-    img: AirForse1,
+    img: imgsShoes.AirForce1.main,
+    addImgs: imgsShoes.AirForce1.addImgs,
     name: "Nike Air Force 1 '07",
     height: "Low",
     gender: "Unisex",
@@ -27,7 +20,8 @@ export const shoes = [
   },
   {
     id: 2,
-    img: CourtVision,
+    img: imgsShoes.CourtVision.main,
+    addImgs: imgsShoes.CourtVision.addImgs,
     name: "Nike Court Vision Mid Next Nature",
     height: "Mid",
     gender: "Unisex",
@@ -38,7 +32,8 @@ export const shoes = [
   },
   {
     id: 3,
-    img: Blazer,
+    img: imgsShoes.Blazer.main,
+    addImgs: imgsShoes.Blazer.addImgs,
     name: "Nike Blazer Mid '77 Vintage",
     height: "Mid",
     gender: "Unisex",
@@ -49,7 +44,8 @@ export const shoes = [
   },
   {
     id: 4,
-    img: Blazer,
+    img: imgsShoes.Blazer.main,
+    addImgs: imgsShoes.Blazer.addImgs,
     name: "Nike Blazer Mid '77 Vintage",
     height: "Mid",
     gender: "Unisex",
@@ -60,7 +56,8 @@ export const shoes = [
   },
   {
     id: 5,
-    img: jordanZoom,
+    img: imgsShoes.jordanZoom.main,
+    addImgs: imgsShoes.jordanZoom.addImgs,
     name: "Air Jordan 1 Zoom CMFT 2",
     height: "High",
     gender: "Unisex",
@@ -71,7 +68,8 @@ export const shoes = [
   },
   {
     id: 6,
-    img: jordanZoom2,
+    img: imgsShoes.jordanZoom2.main,
+    addImgs: imgsShoes.jordanZoom2.addImgs,
     name: "Air Jordan 1 Zoom CMFT 2",
     height: "High",
     gender: "Women",
@@ -82,7 +80,8 @@ export const shoes = [
   },
   {
     id: 7,
-    img: v2k,
+    img: imgsShoes.v2k.main,
+    addImgs: imgsShoes.v2k.addImgs,
     name: "Nike V2K Run",
     height: "Low",
     gender: "Women",
@@ -93,7 +92,8 @@ export const shoes = [
   },
   {
     id: 8,
-    img: jordanLowG,
+    img: imgsShoes.jordanLowG.main,
+    addImgs: imgsShoes.jordanLowG.addImgs,
     name: "Air Jordan 1 Low G",
     height: "Low",
     gender: "Women",
@@ -104,7 +104,8 @@ export const shoes = [
   },
   {
     id: 9,
-    img: jordanLowSE,
+    img: imgsShoes.jordanLowSE.main,
+    addImgs: imgsShoes.jordanLowSE.addImgs,
     name: "Air Jordan 1 Low SE",
     height: "Low",
     gender: "Men",
@@ -115,7 +116,8 @@ export const shoes = [
   },
   {
     id: 10,
-    img: AirForseByYou,
+    img: imgsShoes.AirForseByYou.main,
+    addImgs: imgsShoes.AirForseByYou.addImgs,
     name: "Nike Air Force 1 High By You",
     height: "High",
     gender: "Men",

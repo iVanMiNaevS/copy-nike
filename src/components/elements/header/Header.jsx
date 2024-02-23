@@ -17,10 +17,10 @@ function Header() {
       : document.body.classList.remove("no-scroll");
   }, [openMobMenu]);
   let scrollTop = 0;
-  window.addEventListener("scroll", () => {
-    scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    console.log(scrollTop);
-  });
+  // window.addEventListener("scroll", () => {
+  //   scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  //   console.log(scrollTop);
+  // });
 
   return (
     <>

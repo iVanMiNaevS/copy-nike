@@ -1,0 +1,48 @@
+.mainWrapper {
+  display: grid;
+  width: 70%;
+  margin: 0 auto;
+  grid-template-columns: 2fr minmax(200px, 300px);
+  min-height: 100vh;
+  max-height: fit-content;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  gap: 40px;
+}
+
+.info {
+  @apply flex flex-col gap-10;
+}
+.title {
+  @apply mb-4 text-3xl font-medium;
+}
+.price {
+  @apply text-xl font-medium;
+}
+.addToBag {
+  @apply w-full py-5 text-lg font-semibold text-white rounded-md bg-darkColor;
+}
+@media (min-width: 1700px) {
+  .mainWrapper {
+    width: 70%;
+    grid-template-columns: 2fr 400px;
+  }
+}
+@media (max-width: 1439px) {
+  .mainWrapper {
+    width: 85%;
+    grid-template-columns: 2fr 300px;
+  }
+}
+@media (max-width: 1200px) {
+  .mainWrapper {
+    width: 90%;
+    grid-template-columns: 2fr 250px;
+  }
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+}

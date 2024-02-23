@@ -6,10 +6,10 @@ import ShoesPart from "./shoesPart/ShoesPart";
 import { useState } from "react";
 import { joinClasses } from "../../../utils/joinClasses";
 import { useEffect } from "react";
+import { useRef } from "react";
 function Shoes() {
   const [hideFilters, setHideFilters] = useState(false);
   const [width, setWidth] = useState(window.screen.width);
-
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWidth(window.screen.width);

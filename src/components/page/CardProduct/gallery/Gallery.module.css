@@ -1,0 +1,27 @@
+.container {
+  @apply grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  height: fit-content;
+}
+
+.addImgs {
+  @apply flex flex-col gap-6;
+}
+.addImg {
+  @apply w-full rounded-md bg-slate-100;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.mainImgs {
+  @apply w-full rounded-md bg-slate-100;
+  aspect-ratio: 16/18;
+  object-fit: cover;
+}
+
+@media (max-width: 1439px) {
+  .container {
+    grid-template-columns: 80px 1fr;
+  }
+}

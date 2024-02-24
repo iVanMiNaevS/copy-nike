@@ -3,6 +3,7 @@
   width: 70%;
   margin: 0 auto;
   grid-template-columns: 2fr minmax(200px, 300px);
+  grid-template-rows: auto 1fr;
   min-height: 100vh;
   max-height: fit-content;
   padding-bottom: 80px;
@@ -20,7 +21,13 @@
   @apply text-xl font-medium;
 }
 .addToBag {
-  @apply w-full py-5 text-lg font-semibold text-white rounded-md bg-darkColor;
+  @apply w-full py-5 mt-10 text-lg font-semibold text-white rounded-md bg-darkColor;
+}
+.select {
+  @apply flex flex-col gap-5;
+}
+.namePrice {
+  @apply h-fit;
 }
 @media (min-width: 1700px) {
   .mainWrapper {
@@ -41,6 +48,16 @@
   }
 }
 @media (max-width: 992px) {
+  .mainWrapper {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+  .namePrice {
+    grid-row: 1;
+  }
+  .select {
+    grid-row: 3;
+  }
 }
 @media (max-width: 768px) {
 }

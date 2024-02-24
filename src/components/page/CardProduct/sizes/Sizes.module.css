@@ -4,3 +4,8 @@
 .size {
   @apply flex items-center justify-center w-20 h-16 bg-white border-2 border-gray-300 rounded-md hover:border-black hover:cursor-pointer;
 }
+@media (max-width: 576px) {
+  .size {
+    @apply w-16 h-12;
+  }
+}

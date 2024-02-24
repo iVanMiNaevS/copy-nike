@@ -4,7 +4,11 @@ function Sizes({ sizes }) {
   return (
     <div className={style.container}>
       {sizes.map((size) => {
-        return <div className={style.size}>{size}</div>;
+        return (
+          <div className={style.size} key={size}>
+            {size}
+          </div>
+        );
       })}
     </div>
   );

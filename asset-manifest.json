@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/copy-nike/static/css/main.7a565142.css",
-    "main.js": "/copy-nike/static/js/main.6d664da4.js",
+    "main.css": "/copy-nike/static/css/main.0aae771f.css",
+    "main.js": "/copy-nike/static/js/main.e36494bf.js",
     "static/media/green3.jpeg": "/copy-nike/static/media/green3.b60ca835e2007853e8b2.jpeg",
     "static/media/green5.jpg": "/copy-nike/static/media/green5.d0d9d261fe69afd90ad2.jpg",
     "static/media/winter-mount.jpg": "/copy-nike/static/media/winter-mount.6ffeab2d33d9af7f04b3.jpg",
@@ -48,11 +48,11 @@
     "static/media/court-vision-mid-next-nature-shoes-HFkwn1.png": "/copy-nike/static/media/court-vision-mid-next-nature-shoes-HFkwn1.09476c3b9930dcd4c1f0.png",
     "static/media/code.webp": "/copy-nike/static/media/code.fdc3c718a796615b034d.webp",
     "index.html": "/copy-nike/index.html",
-    "main.7a565142.css.map": "/copy-nike/static/css/main.7a565142.css.map",
-    "main.6d664da4.js.map": "/copy-nike/static/js/main.6d664da4.js.map"
+    "main.0aae771f.css.map": "/copy-nike/static/css/main.0aae771f.css.map",
+    "main.e36494bf.js.map": "/copy-nike/static/js/main.e36494bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a565142.css",
-    "static/js/main.6d664da4.js"
+    "static/css/main.0aae771f.css",
+    "static/js/main.e36494bf.js"
   ]
 }

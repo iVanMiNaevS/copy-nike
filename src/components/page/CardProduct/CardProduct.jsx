@@ -7,14 +7,16 @@ import Sizes from "./sizes/Sizes";
 import Colors from "./colorsShoes/Colors";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
+import { useInView } from "react-intersection-observer";
 function CardProduct() {
   const params = useParams();
   const shoes = useSelector((store) => store.shoes.shoes);
   const item = shoes.find((el) => el.id === Number(params.id));
   const imgs = [item.img, ...item.addImgs];
   const [width, setWidth] = useState(window.screen.width);
-  const bt = useRef(null);
-
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWidth(window.screen.width);
@@ -46,9 +48,13 @@ function CardProduct() {
             <div className="mb-5 text-lg">Select Size</div>
             <Sizes sizes={item.sizes} />
           </div>
-          <button className={style.addToBag} ref={bt}>
-            Add To Bag
-          </button>
+          <div className="mt-9">
+            <div className="h-[1px] absolute" ref={ref}></div>
+            {!inView && (
+              <button className={style.btFullScreen}>Add To Bag</button>
+            )}
+            <button className={style.addToBag}>Add To Bag</button>
+          </div>
         </div>
       </div>
     </div>

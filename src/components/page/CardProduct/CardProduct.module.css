@@ -21,13 +21,24 @@
   @apply text-xl font-medium;
 }
 .addToBag {
-  @apply w-full py-5 mt-10 text-lg font-semibold text-white rounded-md bg-darkColor;
+  @apply w-full py-5 text-lg font-semibold text-white rounded-md bg-darkColor;
+}
+.btFullScreen {
+  @apply hidden;
 }
 .select {
   @apply flex flex-col gap-5;
 }
 .namePrice {
   @apply h-fit;
+}
+@keyframes show {
+  from {
+    border-radius: 5%;
+  }
+  to {
+    border-radius: 0%;
+  }
 }
 @media (min-width: 1700px) {
   .mainWrapper {
@@ -51,6 +62,12 @@
   .mainWrapper {
     width: 90%;
     grid-template-columns: 1fr;
+  }
+  .btFullScreen {
+    @apply fixed block w-full py-5 text-lg font-semibold text-white rounded-none bg-darkColor;
+    bottom: 0;
+    left: 0;
+    animation: show 0.3s;
   }
   .namePrice {
     grid-row: 1;

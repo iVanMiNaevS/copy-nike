@@ -1,12 +1,15 @@
 import React from "react";
 import style from "./Gallery.module.css";
-function Gallery({ imgs }) {
+function Gallery({ imgs, mainImg, setMainImg }) {
   return (
     <div className={style.container}>
       <div className={style.addImgs}>
         {imgs.map((img, index) => {
           return (
             <img
+              onMouseOver={() => {
+                setMainImg(img);
+              }}
               className={style.addImg}
               alt="shoes"
               src={img}
@@ -15,7 +18,7 @@ function Gallery({ imgs }) {
           );
         })}
       </div>
-      <img className={style.mainImgs} alt="shoes" src={imgs[0]}></img>
+      <img className={style.mainImgs} alt="shoes" src={mainImg}></img>
     </div>
   );
 }

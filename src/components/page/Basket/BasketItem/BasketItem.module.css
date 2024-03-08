@@ -1,0 +1,44 @@
+.BasketItem {
+  @apply flex justify-between w-full pb-10 mb-20 border-b-2 h-52 border-b-darkColor;
+}
+.leftPart {
+  @apply flex gap-8;
+}
+.BasketItem img {
+  max-width: 150px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.options {
+  @apply flex flex-col gap-2;
+}
+.name {
+  @apply mb-2 text-xl font-semibold;
+}
+.size {
+  @apply text-lg;
+  word-spacing: 5px;
+  text-transform: uppercase;
+}
+.color {
+  @apply text-lg;
+  word-spacing: 5px;
+  text-transform: uppercase;
+}
+.price {
+  @apply p-3 text-xl font-semibold text-white h-fit bg-darkColor rounded-xl;
+}
+.functional {
+  @apply flex flex-col justify-between;
+}
+.counter {
+  @apply flex gap-2;
+}
+.bt {
+}
+.count {
+  @apply flex items-center border-2 rounded-md px-7 border-darkColor;
+}
+.delete {
+  @apply w-full bg-darkColor;
+}

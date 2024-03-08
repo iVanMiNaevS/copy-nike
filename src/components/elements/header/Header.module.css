@@ -44,6 +44,15 @@ header .wrapper {
   @apply flex items-center justify-end h-16 gap-3 w-80;
 }
 
+.bagIcon {
+  position: relative;
+}
+
+.bagIcon::after {
+  content: attr(countorders);
+  @apply absolute right-0 flex items-center justify-center w-5 h-5 p-1 text-sm font-semibold text-black bg-white rounded-full -bottom-1;
+}
+
 .search1 {
   @apply pl-10 border-none rounded-2xl h-7;
   outline: none;

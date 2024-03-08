@@ -2,3 +2,10 @@
   @apply w-12 h-12 rounded-full hover:cursor-pointer;
   border: 1px solid rgba(128, 128, 128, 0.196);
 }
+.active {
+  border: 3px solid black;
+}
+.activeBlack {
+  border: 3px solid white;
+  box-shadow: 0px 0px 0px 1px black;
+}

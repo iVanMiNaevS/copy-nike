@@ -1,0 +1,28 @@
+.emptyContainer {
+  padding-top: 40px;
+  height: 50vh;
+  text-align: center;
+}
+.emptyContainer h2 {
+  @apply mb-5 text-4xl font-bold;
+}
+.basket {
+  @apply grid w-full min-h-[90vh] pt-16 gap-10;
+  grid-template-columns: 2.5fr minmax(300px, 1fr);
+}
+
+.decoration {
+  @apply w-full p-5 rounded-lg bg-darkColor h-96;
+}
+.decbt {
+  @apply w-full text-2xl py-7;
+}
+.info {
+}
+.fullPrice {
+}
+@media (max-width: 992px) {
+  .basket {
+    grid-template-columns: 1fr;
+  }
+}

@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import NWC from "./components/page/NWC/NWC";
 import NikeApp from "./components/page/NikeApp/NikeApp";
 import CardProduct from "./components/page/CardProduct/CardProduct";
+import Basket from "./components/page/Basket/Basket";
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="NikeAPP" element={<NikeApp />} />
           <Route path="NWC" element={<NWC />} />
+          <Route path="basket" element={<Basket />} />
         </Route>
       </Routes>
     </>

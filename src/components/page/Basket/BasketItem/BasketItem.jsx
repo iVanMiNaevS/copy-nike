@@ -11,6 +11,7 @@ function BasketItem({ item }) {
           <div className={styles.name}>{item.name}</div>
           <div className={styles.size}>Size: {item.options.size}</div>
           <div className={styles.color}>Color: {item.options.color}</div>
+          <div className={styles.MobPrice}>${item.price}</div>
         </div>
 
         <div className={styles.price}>${item.price}</div>

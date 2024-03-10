@@ -1,8 +1,8 @@
 .BasketItem {
-  @apply flex justify-between w-full pb-10 mb-20 border-b-2 h-52 border-b-darkColor;
+  @apply flex justify-between w-full pb-10 mb-20 border-b-2 h-fit border-b-darkColor;
 }
 .leftPart {
-  @apply flex gap-8;
+  @apply flex gap-6;
 }
 .BasketItem img {
   max-width: 150px;
@@ -28,6 +28,9 @@
 .price {
   @apply p-3 text-xl font-semibold text-white h-fit bg-darkColor rounded-xl;
 }
+.MobPrice {
+  @apply hidden;
+}
 .functional {
   @apply flex flex-col justify-between;
 }
@@ -41,4 +44,57 @@
 }
 .delete {
   @apply w-full bg-darkColor;
+}
+@media (max-width: 1200px) {
+  .price {
+    @apply hidden;
+  }
+  .MobPrice {
+    @apply block p-3 font-semibold text-center text-white w-fit h-fit bg-darkColor rounded-xl;
+  }
+}
+@media (max-width: 728px) {
+  .BasketItem {
+    @apply flex-col gap-10;
+  }
+  .leftPart {
+    @apply gap-8;
+  }
+  .BasketItem img {
+    height: 120px;
+  }
+  .price {
+    margin-left: auto;
+  }
+  .functional {
+    @apply flex-row-reverse;
+  }
+  .delete {
+    @apply w-fit;
+  }
+  .price {
+    @apply block;
+  }
+  .MobPrice {
+    @apply hidden;
+  }
+}
+@media (max-width: 520px) {
+  .leftPart {
+    @apply gap-2;
+  }
+}
+@media (max-width: 416px) {
+  .price {
+    @apply hidden;
+  }
+
+  .MobPrice {
+    @apply block p-3 font-semibold text-center text-white w-fit h-fit bg-darkColor rounded-xl;
+  }
+  .name,
+  .size,
+  .color {
+    font-size: 16px;
+  }
 }

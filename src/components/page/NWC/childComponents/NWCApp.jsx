@@ -17,7 +17,11 @@ function NWCApp() {
       <div className={styles.container}>
         <h2 className={styles.h2Layer}>Power Up Your NTC App Workouts</h2>
         {paragraphs.map((text) => {
-          return <p className={styles.pLayer}>{text}</p>;
+          return (
+            <p key={text} className={styles.pLayer}>
+              {text}
+            </p>
+          );
         })}
         <MyButtonLink
           to={"#"}

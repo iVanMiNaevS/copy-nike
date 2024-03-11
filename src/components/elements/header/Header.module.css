@@ -50,7 +50,7 @@ header .wrapper {
 
 .bagIcon::after {
   content: attr(countorders);
-  @apply absolute right-0 flex items-center justify-center w-5 h-5 p-1 text-sm font-semibold text-black bg-white rounded-full -bottom-1;
+  @apply absolute right-0 flex items-center justify-center w-5 h-5 p-1 text-sm font-semibold rounded-full text-lightGreen bg-darkColor -bottom-1;
 }
 
 .search1 {

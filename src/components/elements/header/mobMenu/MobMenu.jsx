@@ -9,8 +9,15 @@ import MMLinks from "./childComponents/MMLinks";
 import styles from "./MobMenu.module.css";
 import { useRef } from "react";
 import { joinClasses } from "../../../../utils/joinClasses";
+import { useLocation } from "react-router-dom";
 
 function MobMenu({ toggleMenu }) {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    toggleMenu(false);
+  }, [pathname]);
+
   const [linksForPanel1, setLinksForPanel1] = useState({
     prevPanel: "All",
     title: "products",

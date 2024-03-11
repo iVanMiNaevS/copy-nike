@@ -27,13 +27,17 @@ function MMPanel({ panelLinks, changeContent, lastPanel, scrollHandlers }) {
                   scrollHandlers.scrollRight(panel);
                 }}
               >
-                <span>{link}</span>
+                <Link>{link}</Link>
                 <i className="bx bx-chevron-right"></i>
               </li>
             );
           } else {
             return (
-              <Link to={"#"} key={index} className={styles.panelLink}>
+              <Link
+                to={panelLinks.prevPanel === "Shoes" && "/shoes"}
+                key={index}
+                className={styles.panelLink}
+              >
                 <span>{link}</span>
               </Link>
             );

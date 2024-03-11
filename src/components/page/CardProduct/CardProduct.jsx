@@ -26,6 +26,7 @@ function CardProduct() {
     price: item.price,
     options: { color: "", size: "" },
     imgs: [item.img, ...item.addImgs],
+    count: 1,
   };
   const [itemInBasket, setItemInBasket] = useState(tesmplateItem);
 
@@ -83,7 +84,11 @@ function CardProduct() {
                   }
                 });
                 if (Object.keys(empty).length === 0) {
-                  dispatch(addItem(itemInBasket));
+                  dispatch(
+                    addItem({
+                      ...itemInBasket,
+                    })
+                  );
                   setItemInBasket(tesmplateItem);
                   setPick(true);
                 } else {

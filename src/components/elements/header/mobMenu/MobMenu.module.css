@@ -1,12 +1,19 @@
 .wrapperForScroll {
-  @apply absolute top-0 -right-full w-screen z-40 h-screen overflow-y-hidden overflow-x-hidden;
+  @apply absolute top-0 z-40 w-screen h-screen overflow-x-hidden overflow-y-hidden -right-full;
   transition: 0.3s;
 }
 .wrapper {
   @apply absolute top-0 -right-full w-screen h-[990px] z-40;
   transition: 0.3s;
 }
+.bagIcon {
+  position: relative;
+}
 
+.bagIcon::after {
+  content: attr(countorders);
+  @apply absolute right-0 flex items-center justify-center w-5 h-5 p-1 text-sm font-semibold rounded-full text-lightGreen bg-darkColor -bottom-1;
+}
 .wrapperForScroll.open {
   @apply right-0 overflow-y-auto;
   transition: 0.3s;
@@ -15,7 +22,7 @@
   @apply right-0;
 }
 .mobMenuBlur {
-  @apply w-full h-full right-0 absolute top-0;
+  @apply absolute top-0 right-0 w-full h-full;
 }
 .wrapper.open .mobMenuBlur {
   animation: anim 0.6s 0.3s forwards;
@@ -38,7 +45,7 @@
 }
 
 .mainPanel {
-  @apply flex flex-col mr-5 absolute top-4 left-5 translate-x-0;
+  @apply absolute flex flex-col mr-5 translate-x-0 top-4 left-5;
   transition: 0.25s;
 }
 .secondPanel {
@@ -50,10 +57,10 @@
   transition: 0.25s;
 }
 .close {
-  @apply text-right text-3xl;
+  @apply text-3xl text-right;
 }
 .links {
-  @apply w-full text-3xl flex flex-col gap-6 font-medium mt-4;
+  @apply flex flex-col w-full gap-6 mt-4 text-3xl font-medium;
 }
 .link {
   @apply flex justify-between;
@@ -73,13 +80,13 @@
   color: rgba(0, 0, 0, 0.7);
 }
 .text a {
-  @apply opacity-100 text-black;
+  @apply text-black opacity-100;
 }
 .item {
   @apply flex items-center gap-5 mb-4;
 }
 .item a {
-  @apply text-xl pt-1;
+  @apply pt-1 text-xl;
 }
 
 @keyframes anim {

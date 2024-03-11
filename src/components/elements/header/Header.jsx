@@ -26,11 +26,13 @@ function Header() {
           <div className="wrapper">
             <div className={styles.headerPart}>
               <div className={styles.icon}>
-                <img
-                  src={require("../../../img/holl-page/jordan-icon.png")}
-                  alt="men"
-                  width={"60px"}
-                />
+                <Link to={"/"}>
+                  <img
+                    src={require("../../../img/holl-page/jordan-icon.png")}
+                    alt="men"
+                    width={"60px"}
+                  />
+                </Link>
               </div>
               <Navigation
                 setDLCont={setDropListContent}

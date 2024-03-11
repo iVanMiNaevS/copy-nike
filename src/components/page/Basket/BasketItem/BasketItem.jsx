@@ -1,8 +1,11 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteItem } from "../../../../store/slices/basketSlice";
 import MyButton from "../../../UI/MyButton/MyButton";
 import styles from "./BasketItem.module.css";
 import Counter from "./Counter";
 function BasketItem({ item }) {
+  const dispatch = useDispatch();
   return (
     <div className={styles.BasketItem}>
       <div className={styles.leftPart}>
@@ -17,8 +20,13 @@ function BasketItem({ item }) {
         <div className={styles.price}>${item.price}</div>
       </div>
       <div className={styles.functional}>
-        <Counter />
-        <MyButton stylesOut={styles.delete}>
+        <Counter item={item} />
+        <MyButton
+          stylesOut={styles.delete}
+          onClick={() => {
+            dispatch(deleteItem({ id: item.idInBasket }));
+          }}
+        >
           <i className="bx bx-trash"></i>
         </MyButton>
       </div>

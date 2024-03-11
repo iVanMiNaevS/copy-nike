@@ -7,12 +7,12 @@
   @apply mb-5 text-4xl font-bold;
 }
 .basket {
-  @apply grid w-full min-h-[90vh] py-16 gap-10;
+  @apply grid w-full min-h-[90vh] py-16 gap-10 relative;
   grid-template-columns: 2.5fr minmax(300px, 1fr);
 }
 
 .decoration {
-  @apply w-full p-5 rounded-lg bg-darkColor h-96;
+  @apply sticky w-full p-5 rounded-lg bg-darkColor h-96 top-[84px];
 }
 .decbt {
   @apply w-full text-2xl py-7;

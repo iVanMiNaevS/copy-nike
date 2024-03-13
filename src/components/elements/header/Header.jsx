@@ -7,6 +7,7 @@ import DropList from "../dropList/DropList";
 import styles from "./Header.module.css";
 import MMWrapper from "./mobMenu/MMWrapper";
 import Navigation from "./Navigation";
+import Search from "./Search";
 
 function Header() {
   const [dropListIsOpen, setDropListIsOpen] = useState(false);
@@ -39,8 +40,7 @@ function Header() {
                 setDLIsOpen={setDropListIsOpen}
               />
               <div className={styles.rightPart}>
-                <input placeholder="Search" className={styles.search1} />
-
+                <Search />
                 <Link to={"basket"} className="hover:cursor-pointer">
                   <i
                     className={`text-3xl bx bx-shopping-bag hover:text-white transiton ${

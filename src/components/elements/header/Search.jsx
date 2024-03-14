@@ -1,12 +1,29 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 import MyButton from "../../UI/MyButton/MyButton";
-function Search() {
-  const [value, setValue] = useState("");
-  const [openSearch, setOpenSearch] = useState(false);
+import ShoesItem from "../../page/Shoes/shoesPart/ShoesItem";
+import { useSelector } from "react-redux";
+function Search({ value, setValue }) {
   const popularTerms = ["Jordan", "Air Force"];
+  const [shoes, setShoes] = useState([]);
+  const Allshoes = useSelector((store) => store.shoes.mainShoes);
+  const [openSearch, setOpenSearch] = useState(false);
+
+  useEffect(() => {
+    openSearch
+      ? document.body.classList.add("no-scroll")
+      : document.body.classList.remove("no-scroll");
+  }, [openSearch]);
+
+  function findShoes(value) {
+    setShoes(
+      Allshoes.filter(
+        (el) => el.name.toLowerCase().indexOf(value.toLowerCase()) !== -1 && el
+      )
+    );
+  }
   return (
     <div
       className={
@@ -22,7 +39,7 @@ function Search() {
       }}
     >
       <div className={styles.separator}>
-        <div className="wrapper">
+        <div className={`wrapper ${styles.p}`}>
           <div className={styles.searchWrapper}>
             <div className={styles.searchHeader}>
               <Link to={"/"} className={styles.iconSr}>
@@ -39,14 +56,23 @@ function Search() {
                   setValue(e.target.value);
                   if (e.target.value.length === 1) {
                     setOpenSearch(true);
+                  } else if (e.target.value.length > 1) {
+                    findShoes(e.target.value);
                   }
                 }}
                 value={value}
               />
+              <i
+                className={`text-3xl bx bx-search ${styles.iconSearch}`}
+                onClick={() => {
+                  setOpenSearch(true);
+                }}
+              ></i>
               <MyButton
                 onClick={() => {
                   setOpenSearch(false);
                   setValue("");
+                  setShoes([]);
                 }}
                 stylesOut={styles.closeBt}
               >
@@ -59,16 +85,35 @@ function Search() {
                 {popularTerms.map((el) => {
                   return (
                     <div key={el} className={styles.popularTerms}>
-                      <a
+                      <div
                         onClick={(e) => {
                           setValue(e.target.innerHTML);
+                          findShoes(e.target.innerHTML);
                         }}
                       >
                         {el}
-                      </a>
+                      </div>
                     </div>
                   );
                 })}
+              </div>
+              <div className={styles.results}>
+                <div className={styles.resultContainer}>
+                  {shoes.map(
+                    (el, index) =>
+                      index < 6 && (
+                        <div
+                          key={el.id}
+                          onClick={() => {
+                            setOpenSearch(false);
+                            setValue("");
+                          }}
+                        >
+                          <ShoesItem shoes={el} />
+                        </div>
+                      )
+                  )}
+                </div>
               </div>
             </div>
           </div>

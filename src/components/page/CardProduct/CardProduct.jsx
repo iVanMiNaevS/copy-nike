@@ -13,8 +13,9 @@ import { useSetOverFlowBody } from "../../../hooks/useSetOverFlowBody";
 function CardProduct() {
   const params = useParams();
   const shoes = useSelector((store) => store.shoes.shoes);
+  const [mainImg, setMainImg] = useState("");
   const item = shoes.find((el) => el.id === Number(params.id));
-  const [mainImg, setMainImg] = useState(item.img);
+  console.log(item.addImgs);
   const dispatch = useDispatch();
   const { ref, inView } = useInView({
     threshold: 0,
@@ -29,6 +30,10 @@ function CardProduct() {
     count: 1,
   };
   const [itemInBasket, setItemInBasket] = useState(tesmplateItem);
+  useEffect(() => {
+    setMainImg(item.img);
+    setItemInBasket(tesmplateItem);
+  }, [params]);
 
   const [pick, setPick] = useState(true);
   function setItem(options, value) {

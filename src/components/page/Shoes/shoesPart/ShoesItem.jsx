@@ -8,7 +8,7 @@ function ShoesItem({ shoes }) {
       className={styles.item}
       data-id={shoes.id}
       onClick={() => {
-        navigate(`${shoes.id}`);
+        navigate(`/shoes/${shoes.id}`);
       }}
     >
       <img src={shoes.img} alt={"img"}></img>

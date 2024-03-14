@@ -13,7 +13,9 @@ function Header() {
   const [dropListIsOpen, setDropListIsOpen] = useState(false);
   const [dropListContent, setDropListContent] = useState("");
   const [openMobMenu, setOpenMobMenu] = useState(false);
+  const [value, setValue] = useState("");
   const countOrders = useSelector((store) => store.basket.items.length);
+
   useEffect(() => {
     openMobMenu
       ? document.body.classList.add("no-scroll")
@@ -40,7 +42,7 @@ function Header() {
                 setDLIsOpen={setDropListIsOpen}
               />
               <div className={styles.rightPart}>
-                <Search />
+                <Search value={value} setValue={setValue} />
                 <Link to={"basket"} className="hover:cursor-pointer">
                   <i
                     className={`text-3xl bx bx-shopping-bag hover:text-white transiton ${
@@ -52,7 +54,7 @@ function Header() {
                 <i className="text-3xl bx bx-user"></i>
               </div>
               <div className={styles.mobRightPart}>
-                <i className="text-3xl bx bx-search"></i>
+                <Search value={value} setValue={setValue} />
                 <Link to={"basket"} className="hover:cursor-pointer">
                   <i
                     className={`text-3xl bx bx-shopping-bag hover:text-white transiton ${

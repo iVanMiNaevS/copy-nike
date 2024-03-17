@@ -1,0 +1,1 @@
+This is my first independent training project on react, I also studied in the process of writing it and therefore noticed some mistakes after a while, but I want to go further and study the following technologies and not stop in one place

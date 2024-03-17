@@ -1,12 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import styles from "./Header.module.css";
+import styles from "../Header.module.css";
 import { Link } from "react-router-dom";
-import MyButton from "../../UI/MyButton/MyButton";
-import ShoesItem from "../../page/Shoes/shoesPart/ShoesItem";
+import MyButton from "../../../UI/MyButton/MyButton";
 import { useSelector } from "react-redux";
+import SearchContent from "./SearchContent";
 function Search({ value, setValue }) {
-  const popularTerms = ["Jordan", "Air Force"];
   const [shoes, setShoes] = useState([]);
   const Allshoes = useSelector((store) => store.shoes.mainShoes);
   const [openSearch, setOpenSearch] = useState(false);
@@ -44,7 +43,7 @@ function Search({ value, setValue }) {
             <div className={styles.searchHeader}>
               <Link to={"/"} className={styles.iconSr}>
                 <img
-                  src={require("../../../img/holl-page/jordan-icon.png")}
+                  src={require("../../../../img/holl-page/jordan-icon.png")}
                   alt="men"
                   width={"60px"}
                 />
@@ -79,43 +78,12 @@ function Search({ value, setValue }) {
                 Close
               </MyButton>
             </div>
-            <div className={styles.content}>
-              <div className={styles.terms}>
-                <div className={styles.title}>Popular Search Terms</div>
-                {popularTerms.map((el) => {
-                  return (
-                    <div key={el} className={styles.popularTerms}>
-                      <div
-                        onClick={(e) => {
-                          setValue(e.target.innerHTML);
-                          findShoes(e.target.innerHTML);
-                        }}
-                      >
-                        {el}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-              <div className={styles.results}>
-                <div className={styles.resultContainer}>
-                  {shoes.map(
-                    (el, index) =>
-                      index < 6 && (
-                        <div
-                          key={el.id}
-                          onClick={() => {
-                            setOpenSearch(false);
-                            setValue("");
-                          }}
-                        >
-                          <ShoesItem shoes={el} />
-                        </div>
-                      )
-                  )}
-                </div>
-              </div>
-            </div>
+            <SearchContent
+              shoes={shoes}
+              setValue={setValue}
+              setOpenSearch={setOpenSearch}
+              findShoes={findShoes}
+            />
           </div>
         </div>
       </div>

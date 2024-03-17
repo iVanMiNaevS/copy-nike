@@ -1,6 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import shoesSlice from "./slices/shoesSlice";
 import basketSlice from "./slices/basketSlice";
+import userSlice from "./slices/userSlice";
 import {
   persistStore,
   persistReducer,
@@ -16,12 +17,13 @@ import storage from "redux-persist/lib/storage";
 const persistConfig = {
   key: "root",
   storage,
-  blacklist: ["shoes"],
+  blacklist: ["shoes", "user"],
 };
 
 const rootReducer = combineReducers({
   basket: basketSlice,
   shoes: shoesSlice,
+  user: userSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

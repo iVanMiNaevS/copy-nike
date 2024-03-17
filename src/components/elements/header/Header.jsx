@@ -7,7 +7,7 @@ import DropList from "../dropList/DropList";
 import styles from "./Header.module.css";
 import MMWrapper from "./mobMenu/MMWrapper";
 import Navigation from "./Navigation";
-import Search from "./Search";
+import Search from "./search/Search";
 
 function Header() {
   const [dropListIsOpen, setDropListIsOpen] = useState(false);
@@ -51,7 +51,9 @@ function Header() {
                     countorders={countOrders}
                   ></i>
                 </Link>
-                <i className="text-3xl bx bx-user"></i>
+                <Link to={"profile"} className="hover:cursor-pointer">
+                  <i className="text-3xl bx bx-user hover:text-white transiton"></i>
+                </Link>
               </div>
               <div className={styles.mobRightPart}>
                 <Search value={value} setValue={setValue} />
@@ -63,7 +65,9 @@ function Header() {
                     countorders={countOrders}
                   ></i>
                 </Link>
-                <i className="text-3xl bx bx-user"></i>
+                <Link to={"profile"}>
+                  <i className="text-3xl bx bx-user"></i>
+                </Link>
                 <div
                   className={styles.burger}
                   onClick={() => setOpenMobMenu(true)}

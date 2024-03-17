@@ -8,6 +8,10 @@ import NWC from "./components/page/NWC/NWC";
 import NikeApp from "./components/page/NikeApp/NikeApp";
 import CardProduct from "./components/page/CardProduct/CardProduct";
 import Basket from "./components/page/Basket/Basket";
+import Profile from "./components/page/Profile/Profile";
+import SignIn from "./components/page/SignIn/SignIn";
+import Login from "./components/page/SignUp/SignUp";
+import SignUp from "./components/page/SignUp/SignUp";
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -32,6 +36,17 @@ function App() {
           <Route path="NikeAPP" element={<NikeApp />} />
           <Route path="NWC" element={<NWC />} />
           <Route path="basket" element={<Basket />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="sign in" element={<SignIn />} />
+          <Route path="sign up" element={<SignUp />} />
+          <Route
+            path="makingOrder"
+            element={
+              <h1 className="text-4xl text-center h-[70vh] pt-10">
+                the order has been placed
+              </h1>
+            }
+          />
         </Route>
       </Routes>
     </>

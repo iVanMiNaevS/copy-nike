@@ -85,7 +85,10 @@ function MobMenu({ toggleMenu }) {
           <MyButtonLink stylesOut="rounded-xl mr-5 mb-5 text-lg font-medium">
             Join Us
           </MyButtonLink>
-          <MyButtonLink stylesOut="rounded-xl mr-5 bg-transparent border border-ctGreen text-black text-lg font-medium">
+          <MyButtonLink
+            to={"/sign in"}
+            stylesOut="rounded-xl mr-5 bg-transparent border border-ctGreen text-black text-lg font-medium"
+          >
             Sign In
           </MyButtonLink>
         </div>

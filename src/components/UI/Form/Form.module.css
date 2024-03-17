@@ -1,0 +1,13 @@
+.form {
+  @apply flex flex-col gap-6 p-6 rounded-md bg-lightGreen;
+}
+.input {
+  @apply px-2 py-1 text-xl border-0 rounded-sm text-darkColor;
+}
+.input:focus {
+  outline-width: 0;
+}
+
+.form button {
+  @apply text-xl;
+}
